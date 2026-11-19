@@ -138,8 +138,8 @@ h3{font-size:16px;line-height:1.25}
 
 /* клиенты */
 .logos{grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr))}
-.lg{background:#fff;border:1px solid var(--line);border-radius:var(--r);min-height:60px;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;font:500 12.5px/1.25 var(--body);color:var(--navy)}
-.lg img{max-height:30px;width:auto}
+.lg{background:#fff;border:1px solid var(--line);border-radius:var(--r);min-height:72px;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;font:500 12.5px/1.25 var(--body);color:var(--navy)}
+.lg img{max-height:40px;max-width:80%;width:auto;height:auto;object-fit:contain}
 .strip{grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));margin-top:var(--gap)}
 .strip figure{margin:0}
 .strip img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;border-radius:var(--r)}
@@ -408,33 +408,28 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600;word-break:break
 <section>
   <div class="wrap">
     <div class="head">
-      <h2>Корпоративные клиенты</h2>
+      <h2>Нам доверяют обучение своих сотрудников</h2>
+      <p class="lead">Банки, университеты и международные компании</p>
     </div>
     <div class="grid logos">
       <div class="lg">ОсОО «Финкап»</div>
-      <div class="lg">ОсОО «Сомо»</div>
-      <div class="lg">КАИ им. И. Абдраимова</div>
-      <div class="lg">Автоком Джапан</div>
-      <div class="lg">ОсОО «Аджи-Сервис»</div>
-      <div class="lg">ОсОО МКК «М-Булак»</div>
-      <div class="lg">Международный университет Кыргызстана</div>
+      <div class="lg"><img src="assets/logos/somo.png" alt="Somo.kg" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/kai.png" alt="Кыргызский авиационный институт им. И. Абдраимова" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/avtokom-japan.png" alt="Автоком Джапан" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/adji-service.png" alt="ОсОО «Аджи-Сервис»" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/mbulak.png" alt="ОсОО МКК «М-Булак»" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/iuk.png" alt="Международный университет Кыргызстана" loading="lazy"></div>
       <div class="lg"><img src="assets/logos/coca-cola.svg" alt="Кока-Кола Бишкек Боттлерс" loading="lazy"></div>
       <div class="lg"><img src="assets/logos/glovo.svg" alt="Glovo" loading="lazy"></div>
-      <div class="lg">Газпром Кыргызстан</div>
-      <div class="lg">Nobel İlaç</div>
-      <div class="lg">Бакай Банк</div>
-      <div class="lg">Дос-Кредобанк</div>
-      <div class="lg">Демир Кыргыз Интернэшнл Банк</div>
-      <div class="lg">Нанолюми Пте. Лтд.</div>
-      <div class="lg">Чакан ГЭС</div>
+      <div class="lg"><img src="assets/logos/gazprom-kyrgyzstan.svg" alt="Газпром Кыргызстан" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/nobel-ilac.png" alt="Nobel İlaç" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/bakai.png" alt="Бакай Банк" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/dos-kredobank.png" alt="Дос-Кредобанк" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/demirbank.svg" alt="Демир Кыргыз Интернэшнл Банк" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/nanolumi.svg" alt="Нанолюми Пте. Лтд." loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/chakan.png" alt="Чакан ГЭС" loading="lazy"></div>
     </div>
     <!-- Кадры из роликов школы (субтитры обрезаны) -->
-    <div class="grid strip">
-      <figure><img src="assets/partners-1.jpg" alt="Новогоднее поздравление партнёров" width="360" height="500" loading="lazy"></figure>
-      <figure><img src="assets/partners-2.jpg" alt="Подарки корпоративным партнёрам" width="360" height="500" loading="lazy"></figure>
-      <figure><img src="assets/partners-4.jpg" alt="Стенд Maximum English на турнире Premium Avangard Swim Kids" width="360" height="640" loading="lazy"></figure>
-      <figure><img src="assets/partners-3.jpg" alt="Самара Назырынбекова, исполнительный директор" width="360" height="440" loading="lazy"></figure>
-    </div>
     <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
@@ -477,9 +472,9 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600;word-break:break
     </ol>
     <!-- Живые фото уроков в филиалах (Мозг, подобраны владелицей) -->
     <div class="grid classes">
-      <img src="assets/class-1.jpg" alt="Занятие в филиале Maximum English" width="900" height="675" loading="lazy">
-      <img src="assets/class-2.jpg" alt="Класс в филиале Maximum English" width="900" height="506" loading="lazy">
-      <img src="assets/class-3.jpg" alt="Класс в филиале Maximum English" width="900" height="675" loading="lazy">
+      <img src="assets/class-1.jpg" alt="Занятие английским для взрослых" width="1000" height="667" loading="lazy">
+      <img src="assets/class-2.jpg" alt="Индивидуальное занятие с преподавателем" width="1000" height="667" loading="lazy">
+      <img src="assets/class-3.jpg" alt="Онлайн-занятие с преподавателем" width="1000" height="667" loading="lazy">
     </div>
     <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>

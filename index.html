@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Корпоративное обучение</title>
+<meta name="description" content="Maximum English: английский для сотрудников компаний — форматы, тарифы, бриф-заявка.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Golos+Text:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#FF5A3C; --ink:#141210; --canvas:#FFFCFA; --muted:#6E6864;
+  --line:#EDE7E3; --wash:#FFEDE8; --row:#FFF6F3; --slope1:#FFD8D0; --slope2:#FFB3A4;
+  --dark:#141210; --on-dark:#A8A19C; --dark-head:#FFFCFA;
+  --display:'Rubik','Trebuchet MS',sans-serif; --text:'Golos Text','Helvetica Neue',Arial,sans-serif;
+  --pill:100px; --card:16px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#F4EFEB; --canvas:#141210; --muted:#A8A19C; --line:#332A26; --wash:#241E1B; --row:#1B1714;
+    --slope1:#241E1B; --slope2:#332A26; --dark:#241E1B; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#F4EFEB; --canvas:#141210; --muted:#A8A19C; --line:#332A26; --wash:#241E1B; --row:#1B1714;
+  --slope1:#241E1B; --slope2:#332A26; --dark:#241E1B; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font:400 17px/1.55 var(--text);overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 32px}}
+section{padding:56px 0}
+@media(min-width:900px){section{padding:80px 0}}
+.eyebrow{font:700 13px/1.4 var(--text);letter-spacing:3px;text-transform:uppercase;color:var(--coral);margin:0 0 12px}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0}
+h2{font-size:clamp(30px,5vw,48px);line-height:1.02;letter-spacing:-1px;margin-bottom:12px}
+h3{font-size:21px;line-height:1.15}
+.lead{color:var(--muted);max-width:640px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:var(--pill);padding:14px 26px;font:700 16px/1 var(--text);text-decoration:none;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;min-height:48px}
+.btn.main{background:var(--coral);border-color:var(--coral);color:#141210}
+.btn:hover{transform:translateY(-1px)}
+.tag{display:inline-block;background:var(--wash);border-radius:var(--pill);padding:6px 14px;font:600 14px/1.3 var(--text)}
+.card{border:1px solid var(--line);border-radius:var(--card);padding:24px;background:var(--canvas)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:var(--canvas);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font:700 15px/1 var(--display);letter-spacing:4px;text-decoration:none}
+.nav{display:none;gap:22px;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)} .nav a:hover{color:var(--ink)}
+@media(min-width:900px){.nav{display:flex}}
+.top .btn{padding:10px 18px;min-height:40px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:48px 0 56px}
+.hero h1{font-size:clamp(40px,8.6vw,92px);line-height:.94;letter-spacing:-2px;max-width:820px;position:relative;z-index:1}
+.hero h1 span{display:inline-block;background:var(--coral);color:#141210;border-radius:var(--pill);padding:0 .28em;margin-top:6px}
+.hero .lead{margin:20px 0 28px;font-size:18px;position:relative;z-index:1;max-width:560px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:1}
+.slopes{position:absolute;right:-40px;bottom:0;width:min(46vw,520px);height:auto;opacity:1;z-index:0}
+@media(max-width:719px){.slopes{width:62vw;right:-30px;opacity:.55}}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:40px;position:relative;z-index:1}
+@media(min-width:900px){.stats{grid-template-columns:repeat(4,1fr);max-width:900px}}
+.stat{border-top:2px solid var(--ink);padding-top:10px}
+.stat b{display:block;font:700 clamp(28px,4vw,40px)/1 var(--display);letter-spacing:-1px}
+.stat small{color:var(--muted);font-size:14px;line-height:1.35;display:block;margin-top:6px}
+
+/* benefits */
+.grid4{display:grid;gap:12px;margin-top:28px}
+@media(min-width:640px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid4{grid-template-columns:repeat(4,1fr)}}
+.ben .n{font:700 15px/1 var(--display);color:var(--coral);margin-bottom:14px;display:block}
+.ben p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.ben.hl{background:var(--wash);border-color:var(--wash)}
+
+/* formats tabs */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:28px 0 16px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:var(--pill);padding:10px 18px;font:600 15px/1.2 var(--text);cursor:pointer;min-height:44px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--canvas)}
+.panel{display:none}
+.panel.on{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:860px){.panel.on{grid-template-columns:1.1fr .9fr;align-items:start}}
+.panel h3{font-size:clamp(24px,3.4vw,34px);margin-bottom:10px}
+.panel p{margin:0 0 12px;color:var(--muted)}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{font-weight:600;text-align:right}
+
+/* pricing */
+.dark{background:var(--dark);color:#FFFCFA}
+.dark .lead{color:var(--on-dark)}
+.dark h2{color:#FFFCFA}
+.toggle{display:inline-flex;border:1px solid #4A403B;border-radius:var(--pill);padding:4px;margin:24px 0 20px;gap:4px;flex-wrap:wrap}
+.toggle button{border:0;background:transparent;color:var(--on-dark);border-radius:var(--pill);padding:10px 16px;font:600 15px/1.2 var(--text);cursor:pointer;min-height:42px}
+.toggle button[aria-pressed="true"]{background:var(--coral);color:#141210}
+.prices{display:grid;gap:12px}
+@media(min-width:640px){.prices{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.prices{grid-template-columns:repeat(3,1fr)}}
+.price{border:1px solid #3A312D;border-radius:var(--card);padding:22px;display:flex;flex-direction:column;gap:8px}
+.price .k{font:700 13px/1.3 var(--text);letter-spacing:2px;text-transform:uppercase;color:var(--on-dark)}
+.price h3{color:#FFFCFA;font-size:20px}
+.price .v{font:700 clamp(32px,4.4vw,44px)/1 var(--display);color:var(--coral);letter-spacing:-1px;margin-top:6px}
+.price .u{color:var(--on-dark);font-size:14px}
+.price .s{color:var(--on-dark);font-size:14px;border-top:1px solid #3A312D;padding-top:10px;margin-top:auto}
+.price.ask .v{color:#FFFCFA;font-size:28px}
+.price .rows{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.price .rows li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px dashed #3A312D;padding-bottom:8px;color:#FFFCFA;font-size:15px}
+.price .rows b{font:700 22px/1 var(--display);color:var(--coral);white-space:nowrap}
+.price.best{border-color:var(--coral)}
+
+.notes{display:grid;gap:10px;margin-top:20px;color:var(--on-dark);font-size:14px}
+@media(min-width:860px){.notes{grid-template-columns:repeat(3,1fr)}}
+.notes div{border-left:2px solid var(--coral);padding-left:12px}
+
+/* steps */
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px;counter-reset:s}
+@media(min-width:1000px){.steps{grid-template-columns:repeat(5,1fr)}}
+.steps li{counter-increment:s;border:1px solid var(--line);border-radius:var(--card);padding:20px;position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 32px/1 var(--display);color:var(--coral);display:block;margin-bottom:12px;letter-spacing:-1px}
+.steps h3{font-size:18px;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted);font-size:14px}
+.steps li.last{background:var(--wash);border-color:var(--wash)}
+.report{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+
+/* clients */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{border:1px solid var(--line);border-radius:var(--pill);padding:10px 16px;font:600 15px/1.25 var(--text)}
+.sector{margin-top:22px}
+.sector .eyebrow{color:var(--muted);font-size:12px;margin-bottom:0}
+
+/* form */
+.formwrap{display:grid;gap:24px}
+@media(min-width:960px){.formwrap{grid-template-columns:.8fr 1.2fr;align-items:start}.formside{position:sticky;top:84px}}
+form{display:grid;gap:14px}
+fieldset{border:1px solid var(--line);border-radius:var(--card);padding:20px;margin:0;display:grid;gap:16px;min-width:0}
+legend{font:700 13px/1 var(--text);letter-spacing:3px;text-transform:uppercase;color:var(--coral);padding:0 8px}
+label.f{display:grid;gap:6px;font-weight:600;font-size:15px}
+.req{color:var(--coral)}
+input[type=text],input[type=tel],input[type=email],input[type=number],input[type=month],textarea{width:100%;font:400 16px/1.4 var(--text);color:var(--ink);background:var(--canvas);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px}
+textarea{min-height:88px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--coral);outline-offset:1px;border-color:transparent}
+.hint{font-weight:400;color:var(--muted);font-size:13px}
+.q{display:grid;gap:8px}
+.q>span{font-weight:600;font-size:15px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt span{display:inline-block;border:1px solid var(--line);border-radius:var(--pill);padding:9px 15px;font-size:14px;line-height:1.3}
+.opt input:checked+span{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
+.opt input:focus-visible+span{outline:2px solid var(--coral);outline-offset:2px}
+.two{display:grid;gap:16px}
+@media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+.err{color:var(--coral);font-size:14px;font-weight:600;min-height:1em}
+.thanks{display:none;border-radius:var(--card);background:var(--wash);padding:32px 24px}
+.thanks h3{font-size:clamp(26px,4vw,36px);margin-bottom:10px}
+.thanks p{margin:0;color:var(--muted)}
+.contacts{display:grid;gap:6px;margin-top:20px;font-size:15px}
+.contacts a{font-weight:700;text-decoration:none}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:grid;gap:6px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">MAXIMUM ENGLISH</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#formats">Форматы</a><a href="#prices">Тарифы</a><a href="#process">Как работаем</a><a href="#clients">Клиенты</a>
+    </nav>
+    <a class="btn main" href="#brief">Заявка</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- БЛОК 1. Английский для вашей команды -->
+<section class="hero">
+  <svg class="slopes" viewBox="0 0 620 1080" aria-hidden="true">
+    <polygon points="62,1080 62,702 207,459 207,1080" fill="var(--slope1)"/>
+    <polygon points="238,1080 238,540 382,297 382,1080" fill="var(--slope2)"/>
+    <polygon points="413,1080 413,378 620,31 620,1080" fill="#FF5A3C"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Корпоративное обучение</p>
+    <h1>Английский для вашей <span>команды</span></h1>
+    <p class="lead">Учим сотрудников в вашем офисе, в нашем центре или онлайн. Программа под задачи компании, отчёты руководству каждый месяц.</p>
+    <div class="cta">
+      <a class="btn main" href="#brief">Заполнить бриф — 5 минут</a>
+      <a class="btn" href="#prices">Смотреть тарифы</a>
+    </div>
+    <!-- Источник цифр: A Компания.md (A1, A3); «15 000 выпускников» — решено Самарой 05.11.2026 -->
+    <div class="stats">
+      <div class="stat"><b>2020</b><small>работаем с 1 июня 2020 года</small></div>
+      <div class="stat"><b>15 000+</b><small>выпускников за годы работы</small></div>
+      <div class="stat"><b>4 + онлайн</b><small>филиала в Бишкеке и онлайн-обучение</small></div>
+      <div class="stat"><b>70%</b><small>урока говорит студент, не преподаватель</small></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Что получает компания</p>
+    <h2>Обучение, которое видно в цифрах</h2>
+    <div class="grid4">
+      <div class="card ben hl"><span class="n">01</span><h3>Программа под ваши задачи</h3><p>Общий курс English File (Oxford) плюс деловой модуль: переписка, встречи, лексика вашей сферы. Ваши материалы включаем в программу.</p></div>
+      <div class="card ben"><span class="n">02</span><h3>Прозрачный контроль</h3><p>Онлайн-таблица посещаемости и оценок, ежемесячный отчёт, промежуточные тесты и экзамен с сертификатом.</p></div>
+      <div class="card ben"><span class="n">03</span><h3>Сильные преподаватели</h3><p>Начальные уровни ведут опытные местные преподаватели, с Intermediate — носители языка. За группой закреплён один преподаватель.</p></div>
+      <div class="card ben"><span class="n">04</span><h3>Под график команды</h3><p>Утром, в обед или после работы. Расписание можно менять на время командировок и загруженных периодов. Цена фиксируется на весь договор.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК 2. Форматы -->
+<section id="formats" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <p class="eyebrow">Форматы обучения</p>
+    <h2>Выберите, как удобнее команде</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tab="f1">В нашем центре</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="f2">В офисе компании</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="f3">Онлайн</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="f4">Индивидуально</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="f5">Для руководства</button>
+    </div>
+
+    <div class="panel on" id="f1" role="tabpanel">
+      <div><h3>Группа в нашем центре</h3><p>Сотрудники занимаются в одном из четырёх филиалов в Бишкеке. Группа собирается из сотрудников одного уровня.</p></div>
+      <ul class="facts"><li><span>Группа</span><span>от 10 человек</span></li><li><span>Месяц</span><span>12 академических часов</span></li><li><span>Ритм</span><span>3×60 или 2×90 минут в неделю</span></li><li><span>Материалы</span><span>включены в стоимость</span></li></ul>
+    </div>
+    <div class="panel" id="f2" role="tabpanel">
+      <div><h3>Преподаватель приезжает к вам</h3><p>Занятия на территории компании, без дороги для сотрудников. Тестирование уровня тоже проводим у вас.</p></div>
+      <ul class="facts"><li><span>Группа</span><span>от 10 человек одного уровня</span></li><li><span>Месяц</span><span>8 занятий по 90 минут</span></li><li><span>Время</span><span>в том числе после 17:00</span></li><li><span>Материалы</span><span>включены в стоимость</span></li></ul>
+    </div>
+    <div class="panel" id="f3" role="tabpanel">
+      <div><h3>Живые онлайн-уроки</h3><p>Урок с преподавателем в реальном времени, а не запись. Можно подключаться из офиса или из дома.</p></div>
+      <ul class="facts"><li><span>Платформа</span><span>Zoom, Google Meet или Microsoft Teams</span></li><li><span>Задания</span><span>Google Classroom или Telegram-группа</span></li><li><span>Группа</span><span>от 10 человек</span></li><li><span>Скидка</span><span>от двух групп</span></li></ul>
+    </div>
+    <div class="panel" id="f4" role="tabpanel">
+      <div><h3>Индивидуально или мини-группой</h3><p>Если уровни сотрудников разные или нужен свой темп: один на один или мини-группа до 3 человек.</p></div>
+      <ul class="facts"><li><span>Мини-группа</span><span>до 3 человек</span></li><li><span>Месяц</span><span>8 занятий по 90 минут</span></li><li><span>Формат</span><span>у вас в офисе или онлайн</span></li><li><span>Цена</span><span>одинакова офлайн и онлайн</span></li></ul>
+    </div>
+    <div class="panel" id="f5" role="tabpanel">
+      <div><h3>Программа для руководства</h3><p>Английский для руководителей: деловой small talk, встречи, письма, общение с иностранными партнёрами. Темы согласуем с вами.</p></div>
+      <ul class="facts"><li><span>Формат</span><span>группа, мини-группа или индивидуально</span></li><li><span>Где</span><span>у вас в офисе или онлайн</span></li><li><span>Время</span><span>вечером, после рабочего дня</span></li><li><span>Старт</span><span>в течение недели после согласования</span></li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК 3. Тарифы. Все цены — из КП, источник у каждой в комментарии -->
+<section id="prices" class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Тарифы</p>
+    <h2>Стоимость за месяц обучения</h2>
+    <p class="lead">Месяц — это 12 академических часов: 12 занятий по 60 минут или 8 по 90. Цена фиксируется на весь срок договора.</p>
+    <!-- Тарифы по словам Самары 20.11 01:33: три тарифа, зависят от числа студентов; выезд в офис дороже; индивидуально 24–26 тыс. -->
+    <div class="prices">
+      <div class="price"><span class="k">Тариф 1 · до 50 сотрудников</span><h3>«Команда»</h3>
+        <ul class="rows"><li><span>В нашем центре</span><b>от 6 000</b></li><li><span>В офисе компании</span><b>от 6 500</b></li><li><span>Онлайн</span><b>от 5 000</b></li></ul>
+        <span class="u">сом за сотрудника в месяц</span><span class="s">Группы одного уровня, тестирование и материалы включены</span></div>
+      <div class="price best"><span class="k">Тариф 2 · от 50 сотрудников</span><h3>«Компания»</h3>
+        <ul class="rows"><li><span>В нашем центре</span><b>от 5 500</b></li><li><span>В офисе компании</span><b>от 6 500</b></li><li><span>Онлайн</span><b>от 4 500</b></li></ul>
+        <span class="u">сом за сотрудника в месяц</span><span class="s">Чем больше команда — тем ниже цена за человека</span></div>
+      <div class="price"><span class="k">Тариф 3 · персонально</span><h3>«Индивидуальный»</h3>
+        <ul class="rows"><li><span>Мини-группа до 3 чел.</span><b>от 40 000</b></li><li><span>1 на 1</span><b>24 000–26 000</b></li></ul>
+        <span class="u">сом в месяц</span><span class="s">Для руководства и ключевых сотрудников: у вас в офисе или онлайн</span></div>
+    </div>
+    <div class="notes">
+      <div>Бесплатно: тестирование уровня каждого сотрудника и первый урок.</div>
+      <div>Учебники, электронные ресурсы и доп. материалы включены в стоимость.</div>
+      <div>Оплата помесячно по счёту. Работаем по договору, документы для бухгалтерии.</div>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК 4. Как мы работаем -->
+<section id="process">
+  <div class="wrap">
+    <p class="eyebrow">Как мы работаем</p>
+    <h2>Пять шагов до первого отчёта</h2>
+    <ol class="steps">
+      <li><h3>Заявка</h3><p>Заполняете бриф на этой странице. Свяжемся в течение рабочего дня.</p></li>
+      <li><h3>Тест уровня</h3><p>Бесплатно: онлайн-тест и короткое собеседование с преподавателем.</p></li>
+      <li><h3>КП и договор</h3><p>Предлагаем формат, группы и график, подписываем договор, выставляем счёт.</p></li>
+      <li><h3>Обучение</h3><p>Бесплатный первый урок, дальше занятия по согласованному расписанию.</p></li>
+      <li class="last"><h3>Отчёты руководству</h3><p>Каждый месяц: проведённые уроки, посещаемость, прогресс каждого сотрудника.</p></li>
+    </ol>
+    <div class="report">
+      <span class="tag">Онлайн-таблица посещаемости</span><span class="tag">2 промежуточных теста</span><span class="tag">Экзамен и сертификат</span><span class="tag">Характеристика на сотрудника</span><span class="tag">Закреплённый куратор</span>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК 5. Нам доверяют. ЛОГОТИПЫ — ПОСЛЕ РАЗРЕШЕНИЯ САМАРЫ. Пока только названия.
+     Источник: список клиентов в 2026-10-12 КП МБанк и 2026-09-22 КП Коллегия арбитров; папки «01 Актуальные» (Глово, Демирбанк, КАИ, Кока-Кола, МУКР, Нанолюми, Нобель, Эмерек) -->
+<section id="clients" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <p class="eyebrow">Нам доверяют</p>
+    <h2>Учим сотрудников банков, производств и вузов</h2>
+    <div class="sector"><p class="eyebrow">Банки и финансы</p><div class="chips"><span class="chip">Бакай Банк</span><span class="chip">Дос-Кредобанк</span><span class="chip">Демир Кыргыз Интернэшнл Банк</span><span class="chip">МКК «М Булак»</span><span class="chip">Финкап</span></div></div>
+    <div class="sector"><p class="eyebrow">Производство, торговля, услуги</p><div class="chips"><span class="chip">Кока-Кола Бишкек Боттлерс</span><span class="chip">Nobel İlaç</span><span class="chip">Glovo</span><span class="chip">Неман Фарм</span><span class="chip">Адал Азык</span><span class="chip">Autocom Japan</span><span class="chip">Аджи-Сервис</span><span class="chip">Сомо</span><span class="chip">Эмерек</span></div></div>
+    <div class="sector"><p class="eyebrow">Промышленность и энергетика</p><div class="chips"><span class="chip">Газпром Кыргызстан</span><span class="chip">Чакан ГЭС</span><span class="chip">Нанолюми Пте. Лтд.</span></div></div>
+    <div class="sector"><p class="eyebrow">Образование и общественные организации</p><div class="chips"><span class="chip">Кыргызский авиационный институт</span><span class="chip">Международный университет КР</span><span class="chip">Политехнический колледж МУКР</span><span class="chip">Бишкекский инновационный колледж</span><span class="chip">Спортивный клуб «Авангард»</span><span class="chip">ОО «Равенство»</span></div></div>
+  </div>
+</section>
+
+<!-- БЛОК 6. Бриф (редакция 2 от 20.11.2026) -->
+<section id="brief" style="border-top:1px solid var(--line)">
+  <div class="wrap formwrap">
+    <div class="formside">
+      <p class="eyebrow">Заявка-бриф</p>
+      <h2>Бриф: корпоративное обучение английскому языку</h2>
+      <p class="lead">Благодарим за интерес к Maximum English. Ответы помогут нам подготовить коммерческое предложение под задачи вашей организации. Заполнение займёт 5 минут.</p>
+      <!-- Контакты: A Компания.md (A4 — номера для клиентов), почта — из шапки КП -->
+      <div class="contacts">
+        <span>Или позвоните: <a href="tel:+996556889889">0556 889 889</a> · <a href="tel:+996706889889">0706 889 889</a></span>
+        <span>Почта: <a href="mailto:maximum.english.school@gmail.com">maximum.english.school@gmail.com</a></span>
+      </div>
+    </div>
+
+    <div>
+    <form id="briefForm" novalidate>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <fieldset>
+        <legend>Об организации</legend>
+        <label class="f"><span>Наименование организации <span class="req">*</span></span><input type="text" name="org" required autocomplete="organization"></label>
+        <label class="f">Сфера деятельности<input type="text" name="sphere"></label>
+        <label class="f"><span>Контактное лицо: ФИО, должность <span class="req">*</span></span><input type="text" name="contact" required></label>
+        <label class="f"><span>Телефон, e-mail <span class="req">*</span></span><input type="text" name="phone_email" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Цели обучения</legend>
+        <div class="q"><span>Какие задачи должно решить обучение?</span><div class="opts">
+          <label class="opt"><input type="checkbox" name="goals" value="Деловая переписка и документация"><span>Деловая переписка и документация</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Переговоры и презентации"><span>Переговоры и презентации</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Работа с иностранными партнёрами и клиентами"><span>Работа с иностранными партнёрами и клиентами</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Командировки"><span>Командировки</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Подготовка к международному экзамену (IELTS и др.)"><span>Подготовка к международному экзамену (IELTS и др.)</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Развитие персонала"><span>Развитие персонала</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Другое"><span>Другое</span></label>
+        </div></div>
+        <label class="f">Какие должности / отделы планируете обучать?<textarea name="departments"></textarea></label>
+        <label class="f">Планируемое количество слушателей<input type="number" name="count" min="1" inputmode="numeric"></label>
+        <div class="q"><span>Текущий уровень английского у сотрудников</span><div class="opts">
+          <label class="opt"><input type="radio" name="level" value="Не известен, нужно тестирование"><span>Не известен, нужно тестирование</span></label>
+          <label class="opt"><input type="radio" name="level" value="Примерно одинаковый"><span>Примерно одинаковый</span></label>
+          <label class="opt"><input type="radio" name="level" value="Разный"><span>Разный</span></label>
+          <label class="opt"><input type="radio" name="level" value="Уточните"><span>Уточните</span></label>
+        </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Формат и сроки</legend>
+        <div class="q"><span>Предпочтительный формат</span><div class="opts">
+          <label class="opt"><input type="checkbox" name="format" value="В офисе вашей организации"><span>В офисе вашей организации</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="В нашем учебном центре"><span>В нашем учебном центре</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="Онлайн"><span>Онлайн</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="Смешанный"><span>Смешанный</span></label>
+        </div></div>
+        <div class="q"><span>Формат групп</span><div class="opts">
+          <label class="opt"><input type="radio" name="groups" value="Группы"><span>Группы</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Мини-группы (2–4 чел.)"><span>Мини-группы (2–4 чел.)</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Индивидуальные занятия"><span>Индивидуальные занятия</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Комбинированно"><span>Комбинированно</span></label>
+        </div></div>
+        <label class="f">Удобные дни и время занятий<textarea name="schedule"></textarea></label>
+        <div class="two">
+          <label class="f">Планируемый старт обучения<input type="month" name="start"></label>
+          <div class="q"><span>Продолжительность программы</span><div class="opts">
+            <label class="opt"><input type="radio" name="duration" value="1 месяц"><span>1 месяц</span></label>
+            <label class="opt"><input type="radio" name="duration" value="3 месяца"><span>3 месяца</span></label>
+            <label class="opt"><input type="radio" name="duration" value="6 месяцев"><span>6 месяцев</span></label>
+            <label class="opt"><input type="radio" name="duration" value="Учебный год"><span>Учебный год</span></label>
+            <label class="opt"><input type="radio" name="duration" value="Уточним"><span>Уточним</span></label>
+          </div></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Отчётность и оплата</legend>
+        <label class="f">В каком формате вам нужны отчёты о посещаемости и прогрессе слушателей? Есть ли утверждённый шаблон?<span class="hint">Если шаблона нет, мы предложим свой.</span><textarea name="reports"></textarea></label>
+        <div class="q"><span>Порядок оплаты, принятый в вашей организации</span><div class="opts">
+          <label class="opt"><input type="radio" name="payment" value="Предоплата"><span>Предоплата</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Постоплата"><span>Постоплата</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Гарантийное письмо"><span>Гарантийное письмо</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Депозит"><span>Депозит</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Другое"><span>Другое</span></label>
+        </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Дополнительно</legend>
+        <label class="f">Что важно учесть при подготовке предложения?<textarea name="extra"></textarea></label>
+      </fieldset>
+
+      <p class="err" id="formErr" role="alert"></p>
+      <button class="btn main" type="submit" style="justify-self:start">Отправить заявку</button>
+    </form>
+    <div class="thanks" id="thanks" role="status">
+      <p class="eyebrow">Бриф получен</p>
+      <h3>Благодарим! Бриф получен.</h3>
+      <p>Наш менеджер свяжется с вами в течение рабочего дня и направит коммерческое предложение.</p>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong style="color:var(--ink);font-family:var(--display);letter-spacing:4px">MAXIMUM ENGLISH</strong>
+    <span>ОсОО «Образовательный центр «Максимум Инглиш» · г. Бишкек, ул. Турусбекова 109/1, каб. 110</span>
+    <span>Лицензия МОиН КР № E2020-0091 от 29.12.2020 · 0556 889 889 · 0706 889 889</span>
+  </div>
+</footer>
+
+<script>
+// Вкладки форматов
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on')});
+    t.setAttribute('aria-selected','true');
+    document.getElementById(t.dataset.tab).classList.add('on');
+  });
+});
+// Переключатель размера группы в тарифах
+document.querySelectorAll('.toggle button').forEach(function(b){
+  b.addEventListener('click', function(){
+    var s = b.dataset.size;
+    document.querySelectorAll('.toggle button').forEach(function(x){x.setAttribute('aria-pressed', String(x===b))});
+    document.querySelectorAll('.price .v[data-p10]').forEach(function(v){ v.textContent = v.dataset['p'+s]; });
+    document.querySelectorAll('.price .u[data-u10]').forEach(function(u){ u.textContent = u.dataset['u'+s]; });
+  });
+});
+
+// Отправка брифа: на почту samaragm@maximumenglish.kg через FormSubmit (без своего сервера). Дана пересылает заявку Самаре в Telegram.
+var LABELS={org:'Организация',sphere:'Сфера',contact:'Контактное лицо',phone_email:'Телефон, e-mail',goals:'Задачи обучения',departments:'Должности / отделы',count:'Кол-во слушателей',level:'Уровень',format:'Формат',groups:'Группы / индивидуально',schedule:'Дни и время',start:'Старт',duration:'Продолжительность',reports:'Отчёты',payment:'Порядок оплаты',extra:'Что учесть'};
+function submitBrief(data){
+  var body={_subject:'Бриф корп. клиента: '+(data.org||''),_template:'table',_captcha:'false'};
+  Object.keys(data).forEach(function(k){ if(k==='_honey'){return;} var v=data[k]; body[LABELS[k]||k]=Array.isArray(v)?v.join(', '):String(v).slice(0,2000); });
+  if(data._honey){ return Promise.resolve(); }
+  return fetch('https://formsubmit.co/ajax/samaragm@maximumenglish.kg',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){ if(!r.ok) throw new Error('send'); return r.json(); });
+}
+
+document.getElementById('briefForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, err = document.getElementById('formErr');
+  var bad = Array.prototype.filter.call(f.querySelectorAll('[required]'), function(i){ return !i.value.trim(); });
+  if (bad.length){ err.textContent = 'Заполните обязательные поля: организация, контактное лицо, телефон или e-mail.'; bad[0].focus(); return; }
+  err.textContent = '';
+  var data = {};
+  new FormData(f).forEach(function(v,k){
+    if (data[k] === undefined) data[k] = v;
+    else data[k] = [].concat(data[k], v);
+  });
+  var btn=f.querySelector('button[type=submit]'); if(btn){btn.disabled=true;}
+  submitBrief(data).catch(function(){ err.textContent='Не удалось отправить. Позвоните нам: +996 556 889 889 или напишите на samaragm@maximumenglish.kg'; if(btn){btn.disabled=false;} throw 0; }).then(function(){
+    f.style.display = 'none';
+    var t = document.getElementById('thanks'); t.style.display = 'block';
+    t.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+});
+</script>
+</body>
+</html>

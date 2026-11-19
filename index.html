@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Корпоративное обучение английскому — Maximum English</title>
-<meta name="description" content="Английский язык для сотрудников компаний в Бишкеке: в офисе компании, в нашем центре или онлайн. Тестирование уровня, программа под задачи, ежемесячные отчёты руководству.">
+<meta name="description" content="Английский для сотрудников компаний в Бишкеке: в офисе, в нашем центре или онлайн. Измеримый результат и ежемесячный отчёт руководству.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Корпоративное обучение английскому — Maximum English">
-<meta property="og:description" content="Английский для сотрудников компаний: в офисе, в нашем центре или онлайн. Программа под задачи организации и ежемесячные отчёты руководству.">
+<meta property="og:description" content="Английский, который приносит Вашей компании сделки и рост. Измеримый результат и ежемесячный отчёт руководству.">
 <meta property="og:image" content="assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -15,273 +15,207 @@
 <link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Golos+Text:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ==== ЦВЕТА: микс вариантов 1 и 2 (решение владелицы 20.11). Меняются здесь. ==== */
+/* ==== ЦВЕТА (микс вариантов 1 и 2, решение владелицы 20.11). Меняются здесь. ==== */
 :root{
-  --navy:#0B1F4B;        /* тёмные блоки и основной текст */
-  --navy-2:#132B60;      /* карточки на тёмном */
-  --navy-line:#2A3F70;   /* линии на тёмном */
-  --on-navy:#FFFFFF;     /* текст на тёмном */
+  --navy:#0B1F4B;        /* тёмные блоки (только герой и тарифы) и текст */
+  --navy-2:#132B60;
+  --navy-line:#2A3F70;
   --on-navy-muted:#B9C3D9;
-  --red:#C8102E;         /* кнопки (белый текст 5,9:1), плашки на белом */
-  --red-on-dark:#E63946; /* крупные цифры и акценты на тёмном (не для мелкого текста) */
+  --red:#C8102E;         /* только главная кнопка и 1–2 точечных акцента; белый текст на нём 5,9:1 */
+  --red-on-dark:#E63946; /* акцент в заголовке героя (крупный текст) */
   --bg:#FFFFFF;
   --bg-soft:#F4F6FA;
   --text:#0B1F4B;
-  --muted:#4A5878;
-  --line:#DDE3EE;
+  --muted:#5A6684;
+  --line:#E2E7F0;
   --display:'Rubik','Trebuchet MS',sans-serif;
   --body:'Golos Text','Helvetica Neue',Arial,sans-serif;
-  --r-pill:100px; --r-card:14px;
+  --r-pill:100px; --r:12px;
+  --gap:clamp(10px,1.4vw,14px);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.55 var(--body);overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.5 var(--body);overflow-x:hidden;-webkit-text-size-adjust:100%}
 img,video{max-width:100%;height:auto;display:block}
 a{color:inherit}
-.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
-@media(min-width:720px){.wrap{padding:0 28px}}
-section{padding:40px 0}
-@media(min-width:900px){section{padding:60px 0}}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,28px)}
+section{padding:clamp(36px,5vw,60px) 0}
 .soft{background:var(--bg-soft)}
-.dark{background:var(--navy);color:var(--on-navy)}
-.eyebrow{font:700 12px/1.4 var(--body);letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin:0 0 10px}
+.dark{background:var(--navy);color:#fff}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:-.2px}
+h2{font-size:clamp(22px,2.6vw,30px);line-height:1.15}
+h3{font-size:16px;line-height:1.25}
+.eyebrow{font:600 11.5px/1.4 var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
 .dark .eyebrow{color:var(--on-navy-muted)}
-h1,h2,h3{font-family:var(--display);font-weight:700;margin:0}
-h2{font-size:clamp(26px,3.6vw,36px);line-height:1.1;letter-spacing:-.5px;margin-bottom:10px}
-h3{font-size:18px;line-height:1.2}
-.mark{background:var(--red);color:#fff;border-radius:8px;padding:0 .22em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.lead{color:var(--muted);max-width:640px;margin:0}
+.lead{color:var(--muted);margin:8px 0 0;max-width:620px}
 .dark .lead{color:var(--on-navy-muted)}
-.head{margin-bottom:22px}
-.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:var(--r-pill);padding:13px 24px;font:700 15px/1 var(--body);text-decoration:none;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;min-height:46px}
+.head{margin-bottom:clamp(16px,2.4vw,24px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:var(--r-pill);padding:12px 22px;font:600 14.5px/1.15 var(--body);text-decoration:none;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;min-height:44px}
 .btn.main{background:var(--red);border-color:var(--red);color:#fff}
 .btn.main:hover{filter:brightness(.92)}
-.dark .btn:not(.main){border-color:#fff;color:#fff}
+.dark .btn:not(.main){border-color:rgba(255,255,255,.6);color:#fff}
 .btn:disabled{opacity:.6;cursor:wait}
+.grid{display:grid;gap:var(--gap)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.card p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.soft .card{border-color:#fff}
+.vid video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r);background:#000}
+.cap{font-size:12.5px;color:var(--muted);margin:6px 0 0;line-height:1.35}
 
-/* шапка */
-.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
-.top img{height:34px;width:auto}
-.nav{display:none;gap:20px;font-weight:600;font-size:14px}
+/* шапка — липкая, компактная */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.top img{height:30px;width:auto}
+.nav{display:none;gap:22px;font-size:14px}
 .nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--navy)}
-@media(min-width:960px){.nav{display:flex}}
-.top .btn{padding:9px 16px;min-height:38px;font-size:13px}
+@media(min-width:1000px){.nav{display:flex}}
+.top .btn{padding:8px 16px;min-height:36px;font-size:13.5px;white-space:nowrap}
 
 /* герой */
-.hero{padding:44px 0 40px}
-@media(min-width:900px){.hero{padding:68px 0 56px}}
-.hero h1{font-size:clamp(32px,5.4vw,56px);line-height:1.04;letter-spacing:-1px;max-width:820px}
+.hero .wrap{display:grid;gap:24px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}}
+.hero h1{font-size:clamp(28px,4.2vw,48px);line-height:1.08;max-width:720px}
 .hero h1 em{font-style:normal;color:var(--red-on-dark)}
-.hero .lead{margin:16px 0 24px;font-size:17px;max-width:600px}
+.hero .lead{font-size:clamp(15px,1.5vw,17px);margin:14px 0 22px}
 .cta{display:flex;flex-wrap:wrap;gap:10px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px;max-width:760px}
-.stat{border-top:1px solid var(--navy-line);padding-top:12px}
-.stat b{display:block;font:700 clamp(26px,4vw,40px)/1 var(--display);color:var(--red-on-dark);letter-spacing:-.5px}
-.stat small{display:block;color:var(--on-navy-muted);font-size:13px;line-height:1.35;margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;max-width:560px}
+.stats div{border-top:1px solid var(--navy-line);padding-top:10px}
+.stats b{display:block;font:600 clamp(20px,2.6vw,28px)/1 var(--display)}
+.stats small{display:block;color:var(--on-navy-muted);font-size:12.5px;line-height:1.3;margin-top:5px}
+.hero figure{margin:0}
+.hero figure img{border-radius:var(--r);width:100%;height:auto}
+.hero figcaption{font-size:12.5px;color:var(--on-navy-muted);margin-top:8px}
 
-/* боли */
-.pains{display:grid;gap:10px}
-@media(min-width:640px){.pains{grid-template-columns:1fr 1fr}}
-.pain{border:1px solid var(--line);border-radius:var(--r-card);padding:18px 18px 18px 16px;display:flex;gap:12px;background:#fff}
-.pain .x{flex:0 0 28px;height:28px;border-radius:50%;background:var(--bg-soft);color:var(--red);font:700 15px/28px var(--display);text-align:center}
-.pain p{margin:4px 0 0;color:var(--muted);font-size:14px}
-.split{display:grid;gap:18px}
-@media(min-width:960px){.split{grid-template-columns:1fr 260px;align-items:start}}
-.photo{border-radius:var(--r-card);object-fit:cover;width:100%;height:100%;min-height:220px;max-height:420px}
-@media(max-width:959px){.photo{height:220px}}
+/* блок «видео + текст» */
+.vt{display:grid;gap:clamp(18px,3vw,36px);align-items:center}
+.vt .vid{max-width:240px;width:100%}
+@media(min-width:760px){.vt{grid-template-columns:220px minmax(0,1fr)}.vt.rev{grid-template-columns:minmax(0,1fr) 220px}.vt.rev .vid{order:2}}
+.cards4{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:18px}
+@media(min-width:1100px){.cards4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.punch{margin:16px 0 0;font:500 16px/1.4 var(--display)}
 
-/* темы */
-.topics{display:grid;gap:10px}
-@media(min-width:640px){.topics{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1000px){.topics{grid-template-columns:repeat(3,1fr)}}
-.topic{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:18px}
-.topic .n{font:700 13px/1 var(--display);color:var(--red);display:block;margin-bottom:10px}
-.topic p{margin:6px 0 0;color:var(--muted);font-size:14px}
-.topic.feat{background:var(--navy);border-color:var(--navy);color:#fff}
-.topic.feat p{color:var(--on-navy-muted)} .topic.feat .n{color:var(--red-on-dark)}
+/* программы */
+.cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}
+.tag-r{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.5px;color:var(--muted);margin-bottom:6px}
 
-/* основатель */
-.founder{display:grid;gap:22px;align-items:center}
-@media(min-width:860px){.founder{grid-template-columns:320px 1fr;gap:40px}}
-.founder img{border-radius:var(--r-card);width:100%;max-width:320px;aspect-ratio:4/5;object-fit:cover;object-position:top}
-@media(max-width:859px){.founder img{max-width:220px}}
-.role{color:var(--muted);margin:0 0 18px}
-.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}
-@media(min-width:640px){.nums{grid-template-columns:repeat(4,1fr)}}
-.num{background:var(--bg-soft);border-radius:var(--r-card);padding:14px}
-.num b{display:block;font:700 26px/1 var(--display);color:var(--red)}
-.num small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:6px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 14px;font:600 13px/1.3 var(--body);background:#fff}
+/* руководитель */
+.lead-grid{display:grid;gap:clamp(18px,3vw,36px);align-items:start}
+@media(min-width:760px){.lead-grid{grid-template-columns:minmax(180px,260px) minmax(0,1fr)}}
+.lead-grid > img{border-radius:var(--r);width:100%;max-width:260px;aspect-ratio:4/5;object-fit:cover;object-position:top}
+.nums{grid-template-columns:repeat(2,minmax(0,1fr));margin:16px 0}
+@media(min-width:1000px){.nums{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.nums div{background:#fff;border-radius:var(--r);padding:12px}
+.nums b{display:block;font:600 22px/1 var(--display)}
+.nums small{display:block;color:var(--muted);font-size:12.5px;margin-top:5px;line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:var(--r-pill);padding:6px 12px;font-size:12.5px}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--gap);margin-top:16px}
+.mini > div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;align-items:center;background:#fff;border-radius:var(--r);padding:8px}
+.mini video,.mini img{width:72px;border-radius:8px;object-fit:cover}
+.mini video{aspect-ratio:9/16;background:#000}
+.mini img{aspect-ratio:1/1}
+.mini h3{font-size:14px}
+.mini p{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+
+/* кейсы и отзывы */
+.vcards{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px;display:flex;flex-direction:column;gap:10px}
+.soft .vcard{border-color:#fff}
+.vcard .vid video{aspect-ratio:9/12}
+.vcard .t{padding:0 4px 4px}
+.vcard p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.pill{display:inline-block;background:var(--bg-soft);border-radius:var(--r-pill);padding:3px 10px;font:600 11.5px/1.4 var(--body);color:var(--muted);margin-bottom:6px}
 
 /* клиенты */
-.logos{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-@media(min-width:640px){.logos{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1000px){.logos{grid-template-columns:repeat(6,1fr)}}
-.lg{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);height:76px;display:flex;align-items:center;justify-content:center;padding:12px 14px;text-align:center;font:600 13px/1.25 var(--body);color:var(--navy)}
-.lg img{max-height:40px;max-width:100%;width:auto}
+.logos{grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr))}
+.lg{background:#fff;border:1px solid var(--line);border-radius:var(--r);min-height:60px;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;font:500 12.5px/1.25 var(--body);color:var(--navy)}
+.lg img{max-height:30px;width:auto}
+.strip{grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));margin-top:var(--gap)}
+.strip figure{margin:0}
+.strip img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;border-radius:var(--r)}
 
 /* тарифы */
-.prices{display:grid;gap:12px}
-@media(min-width:900px){.prices{grid-template-columns:repeat(3,1fr)}}
-.price{background:var(--navy-2);border:1px solid var(--navy-line);border-radius:var(--r-card);padding:20px;display:flex;flex-direction:column;gap:8px}
+.prices{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.price{background:var(--navy-2);border:1px solid var(--navy-line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:6px}
 .price.best{background:#fff;color:var(--navy);border-color:#fff}
-.price .k{font:700 11px/1.3 var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--on-navy-muted)}
-.price.best .k{color:var(--red)}
-.price h3{font-size:22px}
+.price .k{font:600 11px/1.3 var(--body);letter-spacing:1.5px;text-transform:uppercase;color:var(--on-navy-muted)}
+.price.best .k{color:var(--muted)}
+.price h3{font-size:20px}
 .rows{list-style:none;margin:4px 0 0;padding:0}
-.rows li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--navy-line);font-size:14px}
+.rows li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid var(--navy-line);font-size:14px}
 .price.best .rows li{border-color:var(--line)}
-.rows b{font:700 18px/1.2 var(--display);color:var(--red-on-dark);white-space:nowrap}
-.price.best .rows b{color:var(--red)}
-.price .u{font-size:13px;color:var(--on-navy-muted)}
-.price.best .u,.price.best .s{color:var(--muted)}
-.price .s{font-size:13px;color:var(--on-navy-muted);margin-top:auto;padding-top:6px}
-.notes{display:grid;gap:8px;margin-top:16px;font-size:13px;color:var(--on-navy-muted)}
-@media(min-width:860px){.notes{grid-template-columns:repeat(3,1fr)}}
-.notes div{border-left:2px solid var(--red-on-dark);padding-left:10px}
-.dark .cta{margin-top:20px}
+.rows b{font:600 17px/1.2 var(--display);white-space:nowrap}
+.price .u{font-size:12.5px;color:var(--on-navy-muted)}
+.price.best .u{color:var(--muted)}
+.pnote{margin:14px 0 0;font-size:13px;color:var(--on-navy-muted)}
 
 /* шаги */
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
-@media(min-width:640px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1000px){.steps{grid-template-columns:repeat(5,1fr)}}
-.steps li{counter-increment:s;border:1px solid var(--line);border-radius:var(--r-card);padding:16px}
-.steps li::before{content:counter(s,decimal-leading-zero);font:700 26px/1 var(--display);color:var(--red);display:block;margin-bottom:10px}
-.steps h3{font-size:16px;margin-bottom:4px}
-.steps p{margin:0;color:var(--muted);font-size:13.5px}
-.steps li.last{background:var(--navy);border-color:var(--navy);color:#fff}
-.steps li.last p{color:var(--on-navy-muted)}.steps li.last::before{color:var(--red-on-dark)}
-.report{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-.tag{background:var(--bg-soft);border-radius:var(--r-pill);padding:6px 12px;font:600 13px/1.3 var(--body)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font:600 20px/1 var(--display);color:var(--muted);margin-bottom:8px}
 
 /* подходит */
-.fit{display:grid;gap:10px}
-@media(min-width:860px){.fit{grid-template-columns:1fr 1fr}}
-.fitcol{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:18px}
-.fitcol h3{margin-bottom:10px}
-.fitcol ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
-.fitcol li{display:flex;gap:10px;font-size:14.5px}
-.fitcol li::before{content:"";flex:0 0 18px;height:18px;margin-top:2px;border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E") center/14px no-repeat}
-.fitcol.no li::before{background:var(--bg-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5 5l6 6M11 5l-6 6' fill='none' stroke='%234A5878' stroke-width='2'/%3E%3C/svg%3E") center/12px no-repeat}
-.fitcol.no li{color:var(--muted)}
+.fit{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.fit ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;font-size:14px}
+.fit li{display:flex;gap:10px}
+.fit li::before{content:"✓";flex:0 0 20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;line-height:20px;text-align:center}
+.fit .no li{color:var(--muted)}
+.fit .no li::before{content:"–";background:var(--line);color:var(--muted)}
 
 /* форма */
 .formwrap{display:grid;gap:22px}
-@media(min-width:960px){.formwrap{grid-template-columns:.75fr 1.25fr;align-items:start}.formside{position:sticky;top:80px}}
-form{display:grid;gap:12px}
-fieldset{border:1px solid var(--line);border-radius:var(--r-card);padding:16px;margin:0;display:grid;gap:14px;min-width:0;background:#fff}
-legend{font:700 12px/1 var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--red);padding:0 6px}
-label.f{display:grid;gap:6px;font-weight:600;font-size:14px}
+@media(min-width:960px){.formwrap{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start}.formside{position:sticky;top:76px}}
+form{display:grid;gap:10px}
+fieldset{border:1px solid var(--line);border-radius:var(--r);padding:14px;margin:0;display:grid;gap:12px;min-width:0}
+legend{font:600 11.5px/1 var(--body);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:0 6px}
+label.f{display:grid;gap:5px;font-weight:500;font-size:14px}
 .req{color:var(--red)}
-input[type=text],input[type=tel],input[type=email],input[type=number],input[type=month],textarea{width:100%;font:400 16px/1.4 var(--body);color:var(--text);background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;min-height:46px}
-textarea{min-height:80px;resize:vertical}
+input[type=text],input[type=tel],input[type=email],input[type=number],input[type=month],textarea{width:100%;font:400 16px/1.4 var(--body);color:var(--text);background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px}
+textarea{min-height:72px;resize:vertical}
 input:focus,textarea:focus{outline:2px solid var(--navy);outline-offset:1px}
-.hint{font-weight:400;color:var(--muted);font-size:13px}
-.q{display:grid;gap:8px}
-.q>span{font-weight:600;font-size:14px}
-.opts{display:flex;flex-wrap:wrap;gap:7px}
-.opt{position:relative}
+.hint{font-weight:400;color:var(--muted);font-size:12.5px}
+.q{display:grid;gap:7px}
+.q>span{font-weight:500;font-size:14px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{position:relative;max-width:100%}
 .opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
-.opt span{display:inline-block;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 13px;font-size:13.5px;line-height:1.3;background:#fff}
+.opt span{display:inline-block;border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 12px;font-size:13px;line-height:1.3;background:#fff}
 .opt input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy)}
-.opt input:focus-visible+span{outline:2px solid var(--red);outline-offset:2px}
-.two{display:grid;gap:14px}
-@media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
-.err{color:var(--red);font-size:14px;font-weight:600;min-height:1em;margin:0}
-.thanks{display:none;border-radius:var(--r-card);background:var(--bg-soft);padding:28px 22px}
-.thanks h3{font-size:clamp(22px,3vw,28px);margin-bottom:8px}
+.opt input:focus-visible+span{outline:2px solid var(--navy);outline-offset:2px}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.err{color:var(--red);font-size:14px;font-weight:500;min-height:1em;margin:0}
+.thanks{display:none;border-radius:var(--r);background:var(--bg-soft);padding:24px 20px}
+.thanks h3{font-size:22px;margin-bottom:6px}
 .thanks p{margin:0;color:var(--muted)}
-.contacts{display:grid;gap:6px;margin-top:16px;font-size:14px}
-.contacts a{font-weight:700;text-decoration:none}
+.contacts{display:grid;gap:4px;margin-top:14px;font-size:14px}
+.contacts a{font-weight:600;text-decoration:none;word-break:break-word}
 
+.sec-cta{margin-top:clamp(18px,2.4vw,26px)}
+.vt > .sec-cta,.lead-grid > .sec-cta{grid-column:1/-1;margin-top:0;order:3}
+.dark .sec-cta .btn{min-width:200px}
 
-.herogrid{display:grid;gap:26px}
-@media(min-width:900px){.herogrid{grid-template-columns:1.5fr .7fr;align-items:center}}
-.herophoto{margin:0}
-.herophoto img{border-radius:var(--r-card);width:100%;height:300px;object-fit:cover;object-position:center 20%}
-@media(min-width:900px){.herophoto img{height:440px}}
-.herophoto figcaption{font-size:12.5px;color:var(--on-navy-muted);margin-top:8px}
-.casegrid{display:grid;gap:22px}
-@media(min-width:860px){.casegrid{grid-template-columns:300px 1fr;gap:40px;align-items:start}}
-.vid video,.review video{width:100%;aspect-ratio:9/16;border-radius:var(--r-card);background:#000;display:block}
-.vid{max-width:300px}
-@media(max-width:859px){.vid{max-width:260px}}
-.caselist{list-style:none;padding:0;margin:16px 0;display:grid;gap:8px;font-size:15px}
-.caselist li{padding-left:22px;position:relative}
-.caselist li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:var(--red-on-dark)}
-.groupphoto{border-radius:var(--r-card);width:100%;max-height:300px;object-fit:cover}
-.reviews{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
-.review{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:10px}
-.review figcaption{padding:10px 6px 4px;display:grid;gap:2px}
-.review figcaption b{font-family:var(--display);font-size:16px}
-.review figcaption span{color:var(--muted);font-size:13px}
-.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
-@media(min-width:760px){.strip{grid-template-columns:repeat(4,1fr)}}
-.strip figure{margin:0}
-.strip img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:var(--r-card)}
-.strip figcaption{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.3}
+.classes{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin-top:var(--gap)}
+.classes img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
 
-
-.twocol{display:grid;gap:22px}
-@media(min-width:860px){.twocol{grid-template-columns:280px 1fr;gap:40px;align-items:center}}
-.risk{margin:18px 0;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:16px 18px}
-.risk h3{font-size:16px;margin-bottom:8px}
-.risk ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14.5px;color:var(--muted)}
-.risk li::marker{color:var(--red)}
-.punch{font:700 18px/1.35 var(--display);margin:0;border-left:3px solid var(--red);padding-left:12px}
-.vcap{font-size:12.5px;color:var(--muted);margin:8px 0 0}
-
-
-.cases{display:grid;gap:12px}
-@media(min-width:1000px){.cases{grid-template-columns:1fr 1fr}}
-.case{display:grid;grid-template-columns:150px 1fr;gap:16px;background:var(--navy-2);border:1px solid var(--navy-line);border-radius:var(--r-card);padding:14px;align-items:start}
-@media(max-width:560px){.case{grid-template-columns:1fr}.case .vid{max-width:220px}}
-.case h3{font-size:18px;margin:8px 0 6px}
-.case p{margin:0;color:var(--on-navy-muted);font-size:14px}
-.ctag{display:inline-block;background:var(--red);color:#fff;border-radius:var(--r-pill);padding:4px 10px;font:700 11.5px/1.3 var(--body)}
-.case .caselist{font-size:13.5px;margin:12px 0}
-.case .groupphoto{max-height:170px}
-.extra{margin:14px 0 0;font-size:13px;color:var(--on-navy-muted)}
-@media(min-width:1000px){.topics{grid-template-columns:repeat(4,1fr)}}
-
-
-.comm{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;margin-top:16px;background:var(--bg-soft);border-radius:var(--r-card);padding:10px}
-.comm img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
-.comm h3{font-size:15px;margin-bottom:4px}
-.comm p{margin:0;font-size:13.5px;color:var(--muted)}
-
-
-.pros{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
-@media(min-width:1000px){.pros{grid-template-columns:repeat(4,1fr)}}
-.pros div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
-.pros b{display:block;font:700 15px/1.2 var(--display);color:var(--red)}
-.pros span{display:block;font-size:13px;color:var(--muted);margin-top:4px;line-height:1.35}
-.interview{margin:16px 0 0;display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
-.interview video{border-radius:10px;aspect-ratio:9/16;background:#000;width:120px}
-.interview figcaption{font:700 15px/1.35 var(--display)}
-
-/* подвал */
-footer{background:var(--navy);color:var(--on-navy-muted);padding:36px 0 28px;font-size:14px}
-.fgrid{display:grid;gap:22px}
-@media(min-width:860px){.fgrid{grid-template-columns:1fr 1.4fr 1fr}}
-footer img{height:44px;width:auto}
-footer h4{margin:0 0 8px;color:#fff;font:700 13px/1.3 var(--body);letter-spacing:2px;text-transform:uppercase}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
-footer a{color:#fff;text-decoration:none;font-weight:600}
-.legal{border-top:1px solid var(--navy-line);margin-top:24px;padding-top:16px;font-size:12.5px}
+/* подвал — светлый */
+footer{background:var(--bg-soft);color:var(--muted);padding:30px 0 22px;font-size:13.5px;border-top:1px solid var(--line)}
+.fgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+footer img{height:36px;width:auto}
+footer h4{margin:0 0 6px;color:var(--navy);font:600 12px/1.3 var(--body);letter-spacing:1.5px;text-transform:uppercase}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+footer a{color:var(--navy);text-decoration:none;font-weight:600;word-break:break-word}
+.legal{border-top:1px solid var(--line);margin-top:20px;padding-top:12px;font-size:12px}
 </style>
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <a href="#top" aria-label="Maximum English"><img src="assets/logo.png" alt="Maximum English — образовательный центр" width="123" height="34"></a>
+    <a href="#top" aria-label="Maximum English"><img src="assets/logo.png" alt="Maximum English — образовательный центр" width="109" height="30"></a>
     <nav class="nav" aria-label="Разделы">
-      <a href="#topics">Программы</a><a href="#about">О центре</a><a href="#prices">Тарифы</a><a href="#process">Как работаем</a>
+      <a href="#why">Выгода</a><a href="#topics">Программы</a><a href="#cases">Кейсы</a><a href="#prices">Тарифы</a><a href="#process">Как работаем</a>
     </nav>
     <a class="btn main" href="#brief">Оставить заявку</a>
   </div>
@@ -289,231 +223,170 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 
 <main id="top">
 
-<!-- 1. ГЕРОЙ. Цифры: A Компания.md (A1 — с 1 июня 2020; A3 — 4 филиала; A1 «больше 15 000 выпускников» — решено Самарой 05.11.2026) -->
+<!-- 1. ГЕРОЙ (тёмный блок 1 из 2). Цифры: A Компания.md (A1 — с 2020; «15 000+ выпускников» — решено Самарой 05.11.2026; A3 — 4 филиала) -->
 <section class="hero dark">
-  <div class="wrap herogrid">
-   <div>
-    <p class="eyebrow">Корпоративное обучение английскому языку</p>
-    <h1>Английский для Ваших сотрудников — с <em>измеримым результатом</em> и отчётом руководству</h1>
-    <p class="lead">Обучаем команды в офисе компании, в нашем центре или онлайн. Программа строится под задачи организации, прогресс каждого сотрудника виден в ежемесячных отчётах.</p>
-    <div class="cta">
-      <a class="btn main" href="#brief">Получить коммерческое предложение</a>
-      <a class="btn" href="#prices">Тарифы</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>с 2020</b><small>лицензированный учебный центр</small></div>
-      <div class="stat"><b>15 000+</b><small>выпускников за годы работы</small></div>
-      <div class="stat"><b>4</b><small>филиала в Бишкеке и онлайн-обучение</small></div>
-    </div>
-   </div>
-   <!-- Кадр из ролика школы: вручение сертификатов сотрудникам Международного университета Кыргызстана (субтитры обрезаны) -->
-   <figure class="herophoto"><img src="assets/kmu-cert.jpg" alt="Вручение сертификата сотруднице после корпоративного курса" width="800" height="926"><figcaption>Вручение сертификатов после корпоративного курса</figcaption></figure>
-  </div>
-</section>
-
-<!-- ПОЧЕМУ ОБУЧАТЬ СВОИХ. Формулировки Самары: ролики samara-why-train.mp4 (DLsAzyWo4C-.txt) и интервью (DGAzWBvoql0.txt), слегка сокращены -->
-<section class="soft">
-  <div class="wrap twocol">
-    <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-why-poster.jpg" width="360" height="640"><source src="assets/samara-why-train.mp4" type="video/mp4"></video></div>
+  <div class="wrap">
     <div>
-      <p class="eyebrow">Почему это выгодно</p>
-      <h2>Обучить своих выгоднее, чем <span class="mark">нанимать</span> готовых</h2>
-      <p class="lead">Корпоративное обучение нужно компаниям, которые хотят увеличить продажи, чей бизнес связан с английским или кто хочет выйти на международный уровень. Ваши сотрудники уже знают процессы, клиентов и внутренние правила, а английский — это навык, его можно добавить.</p>
-      <div class="pros">
-        <div><b>Экономия</b><span>на зарплатах и подборе кадров</span></div>
-        <div><b>Лояльность</b><span>сотрудник видит, что в него вкладываются</span></div>
-        <div><b>Минимум рисков</b><span>Вы уже знаете этого специалиста</span></div>
-        <div><b>Рост внутри</b><span>возможность продвигать людей в компании</span></div>
+      <p class="eyebrow">Корпоративное обучение английскому</p>
+      <h1>Английский, который приносит Вашей компании <em>сделки и рост</em></h1>
+      <p class="lead">Измеримый результат каждого сотрудника и ежемесячный отчёт руководству.</p>
+      <div class="cta">
+        <a class="btn main" href="#brief">Получить коммерческое предложение</a>
+        <a class="btn" href="#prices">Тарифы</a>
       </div>
-      <div class="risk">
-        <h3>Риски найма «готового» специалиста</h3>
-        <ul>
-          <li>Адаптация — до трёх месяцев</li>
-          <li>Мотивацию приходится выстраивать заново</li>
-          <li>Нет понимания специфики и продукта</li>
-          <li>Нет гарантии, что человек останется</li>
-        </ul>
+      <div class="stats">
+        <div><b>с 2020</b><small>лицензированный центр</small></div>
+        <div><b>15 000+</b><small>выпускников</small></div>
+        <div><b>4</b><small>филиала и онлайн</small></div>
       </div>
-      <p class="punch">Нанять человека с английским ≠ найти отличного специалиста. Инвестируйте в развитие своей команды — а мы поможем.</p>
     </div>
+    <!-- Кадр из ролика школы case-kmu: сотрудники Международного университета Кыргызстана с сертификатами (без субтитров, людей не обрезаем) -->
+    <figure><img src="assets/kmu-group.jpg" alt="Сотрудники Международного университета Кыргызстана с сертификатами после корпоративного курса" width="1080" height="690"><figcaption>Сотрудники Международного университета Кыргызстана после корпоративного курса</figcaption></figure>
   </div>
 </section>
 
-<!-- 2. БОЛИ -->
-<section>
+<!-- 2. ПОЧЕМУ ОБУЧАТЬ СВОИХ. Формулировки Самары: samara-why-train.mp4 (DLsAzyWo4C-.txt), интервью (DGAzWBvoql0.txt) -->
+<section id="why">
+  <div class="wrap vt">
+    <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-why-poster.jpg" width="360" height="640"><source src="assets/samara-why-train.mp4" type="video/mp4"></video><p class="cap">Самара Назырынбекова, исполнительный директор</p></div>
+    <div>
+      <h2>Обучить своих выгоднее, чем нанимать готовых</h2>
+      <p class="lead">Ваши сотрудники уже знают процессы и клиентов. Английский — навык, его можно добавить.</p>
+      <div class="grid cards4">
+        <div class="card"><h3>Экономия</h3><p>на зарплатах и подборе кадров</p></div>
+        <div class="card"><h3>Лояльность</h3><p>сотрудник видит, что в него вкладываются</p></div>
+        <div class="card"><h3>Минимум рисков</h3><p>без адаптации нового человека до 3 месяцев</p></div>
+        <div class="card"><h3>Рост внутри</h3><p>можно продвигать своих людей</p></div>
+      </div>
+      <p class="punch">Инвестируйте в развитие своей команды — а мы поможем.</p>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 3. БОЛИ. «Английский — часть воронки продаж» — samara-funnel.mp4 (DLprAPLIaLu.txt) -->
+<section class="soft">
+  <div class="wrap vt rev">
+    <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-funnel-poster.jpg" width="360" height="640"><source src="assets/samara-funnel.mp4" type="video/mp4"></video><p class="cap">Зачем бизнесу английский внутри команды</p></div>
+    <div>
+      <h2>Если клиент не понят — он уходит из воронки</h2>
+      <p class="lead">Логистика, импорт, туризм, IT: клиенты давно говорят не только на русском.</p>
+      <div class="grid cards4">
+        <div class="card"><h3>Молчат на переговорах</h3><p>с иностранными партнёрами говорит один человек</p></div>
+        <div class="card"><h3>Переписка через переводчик</h3><p>письма и КП занимают лишнее время</p></div>
+        <div class="card"><h3>Курсы «для галочки»</h3><p>посещаемость падает, уровень не растёт</p></div>
+        <div class="card"><h3>Нет отчётов</h3><p>руководство не видит прогресса</p></div>
+      </div>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 4. ПРОГРАММЫ (по КП 2026 и B Продукт.md) -->
+<section id="topics">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Для кого</p>
-      <h2>Корпоративное обучение для компаний, если <span class="mark">Вы</span> замечаете:</h2>
-      <!-- Аргумент «английский — часть воронки продаж» — из ролика Самары samara-funnel.mp4 (DLprAPLIaLu.txt) -->
-      <p class="lead">Английский — часть Вашей воронки продаж. Клиенты давно говорят не только на русском: логистика, опт и импорт, туризм, услуги, стартапы, IT. Если сотрудник не понял, что написал клиент, клиент выпадает из воронки — не из-за продукта, а из-за языка.</p>
+      <h2>Английский под задачи Вашей компании</h2>
+      <p class="lead">Основа — Oxford English File, плюс модуль Вашей отрасли.</p>
     </div>
-    <div class="split">
-      <div class="pains">
-        <div class="pain"><span class="x">1</span><div><h3>Сотрудники теряются на переговорах</h3><p>На встречах с иностранными партнёрами говорит один человек, остальные молчат или ждут перевода.</p></div></div>
-        <div class="pain"><span class="x">2</span><div><h3>Переписка идёт через переводчик</h3><p>Письма и документы на английском занимают лишнее время, а формулировки звучат неуверенно.</p></div></div>
-        <div class="pain"><span class="x">3</span><div><h3>Обучение было, а результата нет</h3><p>Курсы «для галочки»: посещаемость падает, уровень сотрудников не меняется.</p></div></div>
-        <div class="pain"><span class="x">4</span><div><h3>Руководство не видит прогресса</h3><p>Нет данных о посещаемости, тестах и уровне каждого сотрудника, сложно оценить отдачу от вложений.</p></div></div>
-      </div>
-      <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-funnel-poster.jpg" width="360" height="640"><source src="assets/samara-funnel.mp4" type="video/mp4"></video><p class="vcap">Самара Назырынбекова: зачем бизнесу английский внутри команды</p></div>
+    <div class="grid cards">
+      <div class="card"><h3>Деловой английский</h3><p>Small talk, встречи, представление себя и компании</p></div>
+      <div class="card"><h3>Переговоры и презентации</h3><p>Вопросы, аргументы, ситуации из Вашей практики</p></div>
+      <div class="card"><h3>Деловая переписка</h3><p>Письма, КП и документы, лексика отрасли</p></div>
+      <div class="card"><h3>Программа для руководства</h3><p>Мини-группа или один на один, в том числе вечером</p></div>
+      <div class="card"><h3>Подготовка к IELTS</h3><p>Индивидуально, под балл и сроки сотрудника</p></div>
+      <div class="card"><h3>Повышение квалификации преподавателей</h3><p>Коммуникативная методика. Стоимость по запросу</p></div>
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- 3. КЛЮЧЕВЫЕ ТЕМЫ / ПРОГРАММЫ (по КП МБанк, КП Коллегии арбитров, КП онлайн 11.05.2026, B Продукт.md) -->
-<section id="topics" class="soft">
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">Программы</p>
-      <h2>Ключевые темы обучения</h2>
-      <p class="lead">Основа — общий курс по учебнику English File (Oxford). К нему добавляется модуль под задачи Вашей организации.</p>
-    </div>
-    <div class="topics">
-      <div class="topic"><span class="n">01</span><h3>Деловой английский</h3><p>Общий курс с элементами делового общения: знакомство, должность, small talk с партнёрами и гостями.</p></div>
-      <div class="topic"><span class="n">02</span><h3>Переговоры и презентации</h3><p>Участие во встречах: вопросы, уточнения, аргументация. Ситуации из практики Вашей компании.</p></div>
-      <div class="topic"><span class="n">03</span><h3>Деловая переписка</h3><p>Письма, сообщения и документация. Лексика Вашей отрасли: финансы, производство, услуги.</p></div>
-      <div class="topic"><span class="n">04</span><h3>Подготовка к IELTS</h3><p>Индивидуально, под целевой балл и сроки каждого сотрудника.</p></div>
-      <div class="topic feat"><span class="n">05</span><h3>Программа для руководства</h3><p>Отдельная группа, мини-группа или занятия один на один, в удобное время, в том числе вечером.</p></div>
-      <div class="topic"><span class="n">06</span><h3>Отраслевой модуль</h3><p>Профессиональная терминология под запрос: Ваши материалы и типовые ситуации включаем в программу.</p></div>
-      <div class="topic"><span class="n">07</span><h3>Повышение квалификации преподавателей английского</h3><p>Курс «Основы коммуникативной методологии» для преподавателей вузов, колледжей и школ. Стоимость — по запросу.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. ОСНОВАТЕЛЬ. Фото: 08 Бренд и медиа/Лендинг корпоративный/samara.jpg. Биография не указывается — только должность.
-     Цифры: A Компания.md (A1, A3); «около 1 200 студентов» и «15 000+ выпускников» — решено Самарой 05.11.2026 -->
-<section id="about">
-  <div class="wrap founder">
+<!-- 5. РУКОВОДИТЕЛЬ. Самара — исполнительный директор (A2). Биографии нет — только должность.
+     Цифры: A Компания.md (A1, A3); «~1 200 студентов» и «15 000+» — решено Самарой 05.11.2026. Community — из её ролика. -->
+<section id="about" class="soft">
+  <div class="wrap lead-grid">
     <img src="assets/samara.jpg" alt="Самара Назырынбекова, исполнительный директор Maximum English" width="800" height="1067" loading="lazy">
     <div>
-      <p class="eyebrow">Руководитель</p>
       <h2>Самара Назырынбекова</h2>
-      <p class="role">Исполнительный директор Maximum English. Корпоративных клиентов ведёт лично.</p>
-      <div class="nums">
-        <div class="num"><b>2020</b><small>год основания центра</small></div>
-        <div class="num"><b>4</b><small>филиала в Бишкеке и онлайн</small></div>
-        <div class="num"><b>~1 200</b><small>студентов обучаются обычно</small></div>
-        <div class="num"><b>15 000+</b><small>выпускников</small></div>
+      <p class="lead">Исполнительный директор Maximum English. Корпоративных клиентов ведёт лично.</p>
+      <div class="grid nums">
+        <div><b>2020</b><small>год основания</small></div>
+        <div><b>4</b><small>филиала и онлайн</small></div>
+        <div><b>~1 200</b><small>студентов обычно</small></div>
+        <div><b>15 000+</b><small>выпускников</small></div>
       </div>
-      <div class="chips">
-        <span class="chip">Лицензия МОиН КР № E2020-0091</span>
-        <span class="chip">Коммуникативный метод: 70% урока говорит студент</span>
-        <span class="chip">Носители языка с уровня Intermediate</span>
-        <span class="chip">Преподаватели с CELTA, TESOL, TEFL</span>
-        <span class="chip">Учебники Oxford English File</span>
-        <span class="chip">Экзамен и сертификат по итогам уровня</span>
-      </div>
-      <figure class="interview"><video controls playsinline preload="metadata" poster="assets/samara-interview-poster.jpg" width="360" height="640"><source src="assets/samara-interview.mp4" type="video/mp4"></video><figcaption>Самара Назырынбекова о корпоративном обучении</figcaption></figure>
-      <!-- Сообщество — из ролика Самары (community). «Первое сообщество в Кыргызстане» не пишем: сравнение с другими школами запрещено (A1) -->
-      <div class="comm">
-        <img src="assets/hiking.jpg" alt="Hiking Club Maximum English в горах" width="720" height="540" loading="lazy">
-        <div>
-          <h3>Community Maximum English</h3>
-          <p>С июня 2024 года: Hiking Club — походы в горы с преподавателями-носителями, Movie Day — фильмы на английском в кинотеатрах, на каждом показе 200+ студентов.</p>
-        </div>
+      <div class="mini">
+        <div><video controls playsinline preload="metadata" poster="assets/samara-interview-poster.jpg" width="360" height="640"><source src="assets/samara-interview.mp4" type="video/mp4"></video><div><h3>О корпоративном обучении</h3><p>Интервью с Самарой</p></div></div>
+        <div><img src="assets/hiking.jpg" alt="Hiking Club Maximum English в горах" width="720" height="540" loading="lazy"><div><h3>Community Maximum English</h3><p>Hiking Club и Movie Day с июня 2024</p></div></div>
       </div>
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- КЕЙСЫ. Ролики школы case-kmu.mp4 и case-kai.mp4; тексты — по вшитым титрам роликов. Цифр нет — не добавлять без данных. -->
-<section id="case" class="dark">
+<!-- 6. КЕЙСЫ. Ролики школы; тексты — по вшитым титрам. Цифр нет — не добавлять без данных. -->
+<section id="cases">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Кейсы</p>
       <h2>Как это выглядит на практике</h2>
     </div>
-    <div class="cases">
-      <article class="case">
+    <div class="grid vcards">
+      <article class="vcard">
         <div class="vid"><video controls playsinline preload="metadata" poster="assets/poster-case.jpg" width="540" height="960"><source src="assets/case-kmu.mp4" type="video/mp4"></video></div>
-        <div>
-          <span class="ctag">Английский для сотрудников</span>
-          <h3>Международный университет Кыргызстана</h3>
-          <p>Сотрудники университета прошли корпоративный курс английского языка в Maximum English. По итогам обучения слушатели сдали экзамен и получили сертификаты.</p>
-          <ul class="caselist">
-            <li>Группа сотрудников одного уровня</li>
-            <li>Закреплённый преподаватель на весь курс</li>
-            <li>Итоговый экзамен и вручение сертификатов</li>
-          </ul>
-          <img class="groupphoto" src="assets/kmu-group.jpg" alt="Сотрудники университета с сертификатами" width="1080" height="690" loading="lazy">
-        </div>
+        <div class="t"><h3>Международный университет Кыргызстана</h3><p>Корпоративный курс, экзамен и сертификаты для сотрудников.</p></div>
       </article>
-      <article class="case">
+      <article class="vcard">
         <div class="vid"><video controls playsinline preload="metadata" poster="assets/poster-kai.jpg" width="540" height="960"><source src="assets/case-kai.mp4" type="video/mp4"></video></div>
-        <div>
-          <span class="ctag">Повышение квалификации преподавателей</span>
-          <h3>Кыргызский авиационный институт им. И. Абдраимова</h3>
-          <p>Преподаватели английского языка института прошли в нашем центре интенсивный курс «Основы коммуникативной методологии».</p>
-          <ul class="caselist">
-            <li>Стратегии обучения аудированию, чтению, письму и грамматике</li>
-            <li>Практические методики управления классом</li>
-            <li>Инновационные техники преподавания лексики и грамматики</li>
-            <li>Коммуникативные подходы к развитию говорения и письма</li>
-          </ul>
-        </div>
+        <div class="t"><h3>КАИ им. И. Абдраимова</h3><p>Курс «Основы коммуникативной методологии» для преподавателей английского.</p></div>
       </article>
-      <article class="case">
+      <article class="vcard">
         <div class="vid"><video controls playsinline preload="metadata" poster="assets/corp-hiking-poster.jpg" width="540" height="960"><source src="assets/corp-hiking.mp4" type="video/mp4"></video></div>
-        <div>
-          <span class="ctag">Бонус для корпоративных клиентов</span>
-          <h3>Корпоративный Hiking Club</h3>
-          <p>19 октября команда Maximum English вместе с партнёром Avangard Fitness Club провела день на природе для корпоративных клиентов — «М-Булак», «Автоком Джапан» и Кыргызского авиационного института.</p>
-          <ul class="caselist">
-            <li>Маршрут по берёзовой роще в горах</li>
-            <li>Спортивные и интеллектуальные игры, розыгрыш сертификатов от партнёров</li>
-            <li>Йога и активные игры с тренерами Avangard</li>
-            <li>Английский вне класса и новые знакомства между компаниями</li>
-          </ul>
-        </div>
+        <div class="t"><h3>Корпоративный Hiking Club</h3><p>День в горах для команд «М-Булак», «Автоком Джапан» и КАИ.</p></div>
       </article>
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- ОТЗЫВЫ. Видео review-kanykei.mp4; текст отзыва не пересказываем, только подпись. -->
+<!-- 7. ОТЗЫВЫ. Только подписи, текст отзывов не пересказываем -->
 <section class="soft">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Отзывы</p>
-      <h2>Что говорят слушатели корпоративных курсов</h2>
+      <h2>Что говорят наши корпоративные клиенты</h2>
     </div>
-    <div class="reviews">
-      <figure class="review">
-        <video controls playsinline preload="metadata" poster="assets/poster-review.jpg" width="540" height="960"><source src="assets/review-kanykei.mp4" type="video/mp4"></video>
-        <figcaption><b>Каныкей</b><span>сотрудник Международного университета Кыргызстана</span></figcaption>
+    <div class="grid vcards">
+      <figure class="vcard" style="margin:0">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/poster-review.jpg" width="540" height="960"><source src="assets/review-kanykei.mp4" type="video/mp4"></video></div>
+        <figcaption class="t"><h3>Каныкей</h3><p>сотрудник Международного университета Кыргызстана</p></figcaption>
       </figure>
-      <figure class="review">
-        <video controls playsinline preload="metadata" poster="assets/review-adji-poster.jpg" width="540" height="960"><source src="assets/review-adji.mp4" type="video/mp4"></video>
-        <figcaption><b>ОсОО «Аджи-Сервис»</b><span>обучение сотрудников в офисе компании — интервью с командой</span></figcaption>
+      <figure class="vcard" style="margin:0">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/review-adji-poster.jpg" width="540" height="960"><source src="assets/review-adji.mp4" type="video/mp4"></video></div>
+        <figcaption class="t"><h3>ОсОО «Аджи-Сервис»</h3><p>обучение сотрудников в офисе компании</p></figcaption>
       </figure>
-      <figure class="review">
-        <video controls playsinline preload="metadata" poster="assets/review-corp2-poster.jpg" width="540" height="960"><source src="assets/review-corp2.mp4" type="video/mp4"></video>
-        <figcaption><b>Корпоративный клиент</b><span>«Мы являемся корпоративными клиентами Maximum English…»</span></figcaption>
+      <figure class="vcard" style="margin:0">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/review-corp2-poster.jpg" width="540" height="960"><source src="assets/review-corp2.mp4" type="video/mp4"></video></div>
+        <figcaption class="t"><h3>Корпоративный клиент</h3><p>отзыв о корпоративном обучении</p></figcaption>
       </figure>
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- 5. НАМ ДОВЕРЯЮТ. Названия — из КП МБанк 12.10.2026 / КП Коллегия арбитров 22.09.2026 и папок «01 Актуальные».
-     Логотипы: Wikimedia Commons, Public domain (Coca-Cola logo.svg, Glovo Logo.svg).
-     Размещение логотипов клиентов — после разрешения Самары. -->
+<!-- 8. НАМ ДОВЕРЯЮТ. Первые 7 — подтверждены Самарой (DGAzWBvoql0.txt) + МУК из роликов; далее — списки клиентов в КП 2026.
+     Логотипы Coca-Cola, Glovo — Wikimedia Commons, Public domain. Размещение логотипов клиентов — после разрешения Самары. -->
 <section>
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Нам доверяют</p>
       <h2>Корпоративные клиенты</h2>
-      <p class="lead">Сотрудники банков, промышленных предприятий, международных компаний, вузов и общественных организаций.</p>
     </div>
-    <div class="logos">
-      <!-- Первые 7 — список, подтверждённый Самарой в интервью (DGAzWBvoql0.txt) + МУК из роликов -->
+    <div class="grid logos">
       <div class="lg">ОсОО «Финкап»</div>
       <div class="lg">ОсОО «Сомо»</div>
-      <div class="lg">Кыргызский авиационный институт им. И. Абдраимова</div>
+      <div class="lg">КАИ им. И. Абдраимова</div>
       <div class="lg">Автоком Джапан</div>
       <div class="lg">ОсОО «Аджи-Сервис»</div>
       <div class="lg">ОсОО МКК «М-Булак»</div>
       <div class="lg">Международный университет Кыргызстана</div>
-      <!-- Далее — из списков клиентов в КП 2026 (МБанк, Коллегия арбитров). Логотипы: Wikimedia Commons, Public domain -->
       <div class="lg"><img src="assets/logos/coca-cola.svg" alt="Кока-Кола Бишкек Боттлерс" loading="lazy"></div>
       <div class="lg"><img src="assets/logos/glovo.svg" alt="Glovo" loading="lazy"></div>
       <div class="lg">Газпром Кыргызстан</div>
@@ -523,106 +396,95 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
       <div class="lg">Демир Кыргыз Интернэшнл Банк</div>
       <div class="lg">Нанолюми Пте. Лтд.</div>
       <div class="lg">Чакан ГЭС</div>
-      <div class="lg">Неман Фарм</div>
     </div>
-    <!-- Кадры из роликов школы: поздравление партнёров (субтитры обрезаны) -->
-    <div class="strip">
-      <figure><img src="assets/partners-1.jpg" alt="Новогоднее поздравление партнёров" width="360" height="500" loading="lazy"><figcaption>Новогоднее поздравление партнёров</figcaption></figure>
-      <figure><img src="assets/partners-2.jpg" alt="Подарки корпоративным партнёрам" width="360" height="500" loading="lazy"><figcaption>Подарки корпоративным партнёрам</figcaption></figure>
-      <figure><img src="assets/partners-4.jpg" alt="Стенд Maximum English на турнире Premium Avangard Swim Kids" width="360" height="640" loading="lazy"><figcaption>Партнёр детского турнира Premium Avangard Swim Kids</figcaption></figure>
-      <figure><img src="assets/partners-3.jpg" alt="Самара Назырынбекова, исполнительный директор" width="360" height="440" loading="lazy"><figcaption>Самара Назырынбекова, исполнительный директор</figcaption></figure>
+    <!-- Кадры из роликов школы (субтитры обрезаны) -->
+    <div class="grid strip">
+      <figure><img src="assets/partners-1.jpg" alt="Новогоднее поздравление партнёров" width="360" height="500" loading="lazy"></figure>
+      <figure><img src="assets/partners-2.jpg" alt="Подарки корпоративным партнёрам" width="360" height="500" loading="lazy"></figure>
+      <figure><img src="assets/partners-4.jpg" alt="Стенд Maximum English на турнире Premium Avangard Swim Kids" width="360" height="640" loading="lazy"></figure>
+      <figure><img src="assets/partners-3.jpg" alt="Самара Назырынбекова, исполнительный директор" width="360" height="440" loading="lazy"></figure>
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- 6. ТАРИФЫ — без изменений с прошлой версии (по словам Самары 20.11 01:33 и КП) -->
+<!-- 9. ТАРИФЫ (тёмный блок 2 из 2) — цены без изменений (Самара 20.11 01:33 и КП) -->
 <section id="prices" class="dark">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Тарифы</p>
       <h2>Стоимость за месяц обучения</h2>
-      <p class="lead">Месяц — 12 академических часов: 12 занятий по 60 минут или 8 по 90. Цена фиксируется на весь срок договора.</p>
+      <p class="lead">Месяц — 12 академических часов. Цена фиксируется на весь договор.</p>
     </div>
-    <div class="prices">
-      <div class="price"><span class="k">Тариф 1 · до 50 сотрудников</span><h3>«Команда»</h3>
+    <div class="grid prices">
+      <div class="price"><span class="k">до 50 сотрудников</span><h3>«Команда»</h3>
         <ul class="rows"><li><span>В нашем центре</span><b>от 6 000</b></li><li><span>В офисе компании</span><b>от 6 500</b></li><li><span>Онлайн</span><b>от 5 000</b></li></ul>
-        <span class="u">сом за сотрудника в месяц</span><span class="s">Группы одного уровня, тестирование и материалы включены</span></div>
-      <div class="price best"><span class="k">Тариф 2 · от 50 сотрудников</span><h3>«Компания»</h3>
+        <span class="u">сом за сотрудника в месяц</span></div>
+      <div class="price best"><span class="k">от 50 сотрудников</span><h3>«Компания»</h3>
         <ul class="rows"><li><span>В нашем центре</span><b>от 5 500</b></li><li><span>В офисе компании</span><b>от 6 500</b></li><li><span>Онлайн</span><b>от 4 500</b></li></ul>
-        <span class="u">сом за сотрудника в месяц</span><span class="s">Чем больше команда, тем ниже цена за человека</span></div>
-      <div class="price"><span class="k">Тариф 3 · персонально</span><h3>«Индивидуальный»</h3>
+        <span class="u">сом за сотрудника в месяц</span></div>
+      <div class="price"><span class="k">персонально</span><h3>«Индивидуальный»</h3>
         <ul class="rows"><li><span>Мини-группа до 3 чел.</span><b>от 40 000</b></li><li><span>1 на 1</span><b>24 000–26 000</b></li></ul>
-        <span class="u">сом в месяц</span><span class="s">Для руководства и ключевых сотрудников: у Вас в офисе или онлайн</span></div>
+        <span class="u">сом в месяц</span></div>
     </div>
-    <div class="notes">
-      <div>Бесплатно: тестирование уровня каждого сотрудника и первый урок.</div>
-      <div>Учебники, электронные ресурсы и дополнительные материалы включены в стоимость.</div>
-      <div>Оплата помесячно по счёту. Работаем по договору, документы для бухгалтерии.</div>
-    </div>
-    <p class="extra">Программа для руководства и повышение квалификации преподавателей английского — стоимость по запросу.</p>
-    <div class="cta"><a class="btn main" href="#brief">Рассчитать для моей компании</a></div>
+    <p class="pnote">Тестирование, первый урок и учебные материалы — бесплатно. Оплата помесячно по договору.</p>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- 7. КАК МЫ РАБОТАЕМ -->
+<!-- 10. КАК МЫ РАБОТАЕМ -->
 <section id="process">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Как мы работаем</p>
-      <h2>Пять шагов от заявки до первого отчёта</h2>
+      <h2>От заявки до первого отчёта</h2>
     </div>
-    <ol class="steps">
-      <li><h3>Заявка</h3><p>Вы заполняете бриф на этой странице. Свяжемся в течение рабочего дня.</p></li>
-      <li><h3>Тест уровня</h3><p>Бесплатно: онлайн-тест и короткое собеседование с преподавателем.</p></li>
-      <li><h3>КП и договор</h3><p>Предлагаем формат, состав групп и график, подписываем договор, выставляем счёт.</p></li>
-      <li><h3>Обучение</h3><p>Бесплатный первый урок, далее занятия по согласованному расписанию.</p></li>
-      <li class="last"><h3>Отчёты руководству</h3><p>Ежемесячно: проведённые уроки, посещаемость, прогресс каждого сотрудника.</p></li>
+    <ol class="grid steps">
+      <li class="card"><h3>Заявка</h3><p>Бриф на 5 минут</p></li>
+      <li class="card"><h3>Тест уровня</h3><p>Бесплатно, для каждого</p></li>
+      <li class="card"><h3>КП и договор</h3><p>Формат, группы, график</p></li>
+      <li class="card"><h3>Обучение</h3><p>Первый урок бесплатно</p></li>
+      <li class="card"><h3>Отчёт руководству</h3><p>Каждый месяц</p></li>
     </ol>
-    <div class="report">
-      <span class="tag">Онлайн-таблица посещаемости</span><span class="tag">2 промежуточных теста</span><span class="tag">Экзамен и сертификат</span><span class="tag">Характеристика на сотрудника</span><span class="tag">Закреплённый куратор</span>
+    <!-- Живые фото уроков в филиалах (Мозг, подобраны владелицей) -->
+    <div class="grid classes">
+      <img src="assets/class-1.jpg" alt="Занятие в филиале Maximum English" width="900" height="675" loading="lazy">
+      <img src="assets/class-2.jpg" alt="Класс в филиале Maximum English" width="900" height="506" loading="lazy">
+      <img src="assets/class-3.jpg" alt="Класс в филиале Maximum English" width="900" height="675" loading="lazy">
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- 8. ЭТО ПОДХОДИТ, ЕСЛИ (условия — из КП: группы от 10 человек одного уровня, мини-группа до 3, уровень 10–15 недель, обещать результат к дате нельзя — B Продукт.md) -->
+<!-- 11. ЭТО ПОДХОДИТ, ЕСЛИ (условия из КП и B Продукт.md) -->
 <section class="soft">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Честно о формате</p>
       <h2>Это подходит, если</h2>
     </div>
-    <div class="fit">
-      <div class="fitcol">
-        <h3>Подходит</h3>
-        <ul>
-          <li>Английский нужен сотрудникам в работе: партнёры, переписка, встречи, командировки</li>
-          <li>Вы готовы выделить 2–3 занятия в неделю и согласовать стабильный график</li>
-          <li>Вам важны отчётность, посещаемость и измеримый прогресс</li>
-          <li>Обучать планируется группу от 10 человек или ключевых сотрудников индивидуально</li>
-        </ul>
-      </div>
-      <div class="fitcol no">
-        <h3>Не подходит</h3>
-        <ul>
-          <li>Нужен свободный английский «за месяц»: один уровень занимает 10–15 недель</li>
-          <li>Сотрудники разного уровня должны учиться в одной группе: группы формируем строго по уровню</li>
-          <li>Обучение нужно только для отчёта, без участия сотрудников</li>
-        </ul>
-      </div>
+    <div class="grid fit">
+      <div class="card"><h3>Подходит</h3><ul>
+        <li>Английский нужен в работе: партнёры, переписка, встречи</li>
+        <li>Готовы к 2–3 занятиям в неделю</li>
+        <li>Важны отчёты и измеримый прогресс</li>
+      </ul></div>
+      <div class="card no"><h3>Не подходит</h3><ul>
+        <li>Нужен свободный английский «за месяц»</li>
+        <li>Разные уровни в одной группе</li>
+        <li>Обучение только для отчёта</li>
+      </ul></div>
     </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
   </div>
 </section>
 
-<!-- 9. БРИФ -->
+<!-- 12. БРИФ — поля и логика отправки без изменений -->
 <section id="brief">
   <div class="wrap formwrap">
     <div class="formside">
-      <p class="eyebrow">Заявка-бриф</p>
-      <h2>Бриф: корпоративное обучение английскому языку</h2>
-      <p class="lead">Благодарим за интерес к Maximum English. Ответы помогут нам подготовить коммерческое предложение под задачи Вашей организации. Заполнение займёт 5 минут.</p>
-      <!-- Контакты: A Компания.md (A4 — номера для клиентов) -->
+      <h2>Бриф для коммерческого предложения</h2>
+      <p class="lead">5 минут — и мы подготовим предложение под Вашу компанию.</p>
+      <!-- Контакты: A Компания.md (A4) -->
       <div class="contacts">
-        <span>Или позвоните: <a href="tel:+996556889889">0556 889 889</a> · <a href="tel:+996706889889">0706 889 889</a></span>
+        <span>Телефон: <a href="tel:+996556889889">0556 889 889</a> · <a href="tel:+996706889889">0706 889 889</a></span>
         <span>Почта: <a href="mailto:maximum.english.school@gmail.com">maximum.english.school@gmail.com</a></span>
       </div>
     </div>
@@ -715,21 +577,21 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 </section>
 </main>
 
-<!-- ПОДВАЛ. Адреса и телефоны — A Компания.md (A3, A4), лицензия и реквизиты — A8 -->
+<!-- ПОДВАЛ (светлый). Адреса и телефоны — A Компания.md (A3, A4), лицензия — A8 -->
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <img src="assets/logo-white.png" alt="Maximum English — образовательный центр" width="159" height="44" loading="lazy">
-        <p style="margin:12px 0 0">Корпоративное обучение английскому языку. Пн–сб 08:00–21:00.</p>
+        <img src="assets/logo.png" alt="Maximum English — образовательный центр" width="130" height="36" loading="lazy">
+        <p style="margin:10px 0 0">Пн–сб 08:00–21:00</p>
       </div>
       <div>
         <h4>Филиалы в Бишкеке</h4>
         <ul>
           <li>ул. Турусбекова 109/1, БЦ «Максимум», каб. 110</li>
-          <li>ул. Сухэ-Батора 5/5, здание «Берекет», 3 этаж</li>
+          <li>ул. Сухэ-Батора 5/5, «Берекет», 3 этаж</li>
           <li>ул. Рыскулова 28, офис № 6</li>
-          <li>ул. Фурманова 23, напротив КГТУ им. Раззакова</li>
+          <li>ул. Фурманова 23, напротив КГТУ</li>
         </ul>
       </div>
       <div>

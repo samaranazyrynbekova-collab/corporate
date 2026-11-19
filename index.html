@@ -101,6 +101,14 @@ h3{font-size:16px;line-height:1.25}
 .tag-r{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.5px;color:var(--muted);margin-bottom:6px}
 
 /* руководитель */
+
+/* главное видео — интервью Самары */
+.feature{display:grid;gap:clamp(18px,3vw,40px);align-items:center}
+@media(min-width:820px){.feature{grid-template-columns:minmax(260px,380px) minmax(0,1fr)}}
+.feature video{width:100%;max-width:380px;aspect-ratio:9/16;border-radius:16px;background:#000;object-fit:cover;justify-self:center;box-shadow:0 18px 40px -20px rgba(11,31,75,.45)}
+.feature ul{list-style:none;padding:0;margin:14px 0 18px;display:grid;gap:10px}
+.feature li{padding-left:22px;position:relative;line-height:1.45}
+.feature li:before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--red)}
 .lead-grid{display:grid;gap:clamp(18px,3vw,36px);align-items:start}
 @media(min-width:760px){.lead-grid{grid-template-columns:minmax(180px,260px) minmax(0,1fr)}}
 .lead-grid > img{border-radius:var(--r);width:100%;max-width:260px;aspect-ratio:4/5;object-fit:cover;object-position:top}
@@ -246,6 +254,24 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600;word-break:break
 </section>
 
 <!-- 2. ПОЧЕМУ ОБУЧАТЬ СВОИХ. Формулировки Самары: samara-why-train.mp4 (DLsAzyWo4C-.txt), интервью (DGAzWBvoql0.txt) -->
+<!-- ГЛАВНОЕ ВИДЕО: интервью Самары о корпоративном обучении -->
+<section id="interview">
+  <div class="wrap feature">
+    <video controls playsinline preload="metadata" poster="assets/samara-interview-poster.jpg" width="540" height="960"><source src="assets/samara-interview.mp4" type="video/mp4"></video>
+    <div>
+      <h2>Самара Назырынбекова о корпоративном обучении</h2>
+      <p class="lead">Исполнительный директор Maximum English — почему компании выгоднее обучать своих сотрудников</p>
+      <ul>
+        <li>Экономия на зарплатах и подборе кадров</li>
+        <li>Лояльность: сотрудник видит, что в него вкладываются</li>
+        <li>Меньше рисков — компания уже знает этого человека</li>
+        <li>Рост людей внутри компании</li>
+      </ul>
+      <a class="btn main" href="#brief">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
 <section id="why">
   <div class="wrap vt">
     <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-why-poster.jpg" width="360" height="640"><source src="assets/samara-why-train.mp4" type="video/mp4"></video><p class="cap">Самара Назырынбекова, исполнительный директор</p></div>
@@ -322,7 +348,6 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600;word-break:break
         <div><b>15 000+</b><small>выпускников</small></div>
       </div>
       <div class="mini">
-        <div><video controls playsinline preload="metadata" poster="assets/samara-interview-poster.jpg" width="360" height="640"><source src="assets/samara-interview.mp4" type="video/mp4"></video><div><h3>О корпоративном обучении</h3><p>Интервью с Самарой</p></div></div>
         <div><img src="assets/hiking.jpg" alt="Hiking Club Maximum English в горах" width="720" height="540" loading="lazy"><div><h3>Community Maximum English</h3><p>Hiking Club и Movie Day с июня 2024</p></div></div>
       </div>
     </div>

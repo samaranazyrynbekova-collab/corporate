@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Корпоративное обучение английскому — Maximum English</title>
+<meta name="description" content="Английский для сотрудников компаний в Бишкеке: в офисе, в нашем центре или онлайн. Измеримый результат и ежемесячный отчёт руководству.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Корпоративное обучение английскому — Maximum English">
+<meta property="og:description" content="Английский, который приносит Вашей компании сделки и рост. Измеримый результат и ежемесячный отчёт руководству.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==== ЦВЕТА (микс вариантов 1 и 2, решение владелицы 20.11). Меняются здесь. ==== */
+:root{
+  --navy:#0B1F4B;        /* тёмные блоки (только герой и тарифы) и текст */
+  --navy-2:#132B60;
+  --navy-line:#2A3F70;
+  --on-navy-muted:#B9C3D9;
+  --red:#C8102E;         /* только главная кнопка и 1–2 точечных акцента; белый текст на нём 5,9:1 */
+  --red-on-dark:#E63946; /* акцент в заголовке героя (крупный текст) */
+  --bg:#FFFFFF;
+  --bg-soft:#F4F6FA;
+  --text:#0B1F4B;
+  --muted:#5A6684;
+  --line:#E2E7F0;
+  --display:'Rubik','Trebuchet MS',sans-serif;
+  --body:'Golos Text','Helvetica Neue',Arial,sans-serif;
+  --r-pill:100px; --r:12px;
+  --gap:clamp(10px,1.4vw,14px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.5 var(--body);overflow-x:hidden;-webkit-text-size-adjust:100%}
+img,video{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,28px)}
+section{padding:clamp(36px,5vw,60px) 0}
+.soft{background:var(--bg-soft)}
+.dark{background:var(--navy);color:#fff}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:-.2px}
+h2{font-size:clamp(22px,2.6vw,30px);line-height:1.15}
+h3{font-size:16px;line-height:1.25}
+.eyebrow{font:600 11.5px/1.4 var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.dark .eyebrow{color:var(--on-navy-muted)}
+.lead{color:var(--muted);margin:8px 0 0;max-width:620px}
+.dark .lead{color:var(--on-navy-muted)}
+.head{margin-bottom:clamp(16px,2.4vw,24px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:var(--r-pill);padding:12px 22px;font:600 14.5px/1.15 var(--body);text-decoration:none;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;min-height:44px}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff}
+.btn.main:hover{filter:brightness(.92)}
+.dark .btn:not(.main){border-color:rgba(255,255,255,.6);color:#fff}
+.btn:disabled{opacity:.6;cursor:wait}
+.grid{display:grid;gap:var(--gap)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.card p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.soft .card{border-color:#fff}
+.vid video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r);background:#000}
+.cap{font-size:12.5px;color:var(--muted);margin:6px 0 0;line-height:1.35}
+
+/* шапка — липкая, компактная */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.top img{height:30px;width:auto}
+.nav{display:none;gap:22px;font-size:14px}
+.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--navy)}
+@media(min-width:1000px){.nav{display:flex}}
+.top .btn{padding:8px 16px;min-height:36px;font-size:13.5px;white-space:nowrap}
+
+/* герой */
+.hero .wrap{display:grid;gap:24px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}}
+.hero h1{font-size:clamp(28px,4.2vw,48px);line-height:1.08;max-width:720px}
+.hero h1 em{font-style:normal;color:var(--red-on-dark)}
+.hero .lead{font-size:clamp(15px,1.5vw,17px);margin:14px 0 22px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;max-width:560px}
+.stats div{border-top:1px solid var(--navy-line);padding-top:10px}
+.stats b{display:block;font:600 clamp(20px,2.6vw,28px)/1 var(--display)}
+.stats small{display:block;color:var(--on-navy-muted);font-size:12.5px;line-height:1.3;margin-top:5px}
+.hero figure{margin:0}
+.hero figure img{border-radius:var(--r);width:100%;height:auto}
+.hero figcaption{font-size:12.5px;color:var(--on-navy-muted);margin-top:8px}
+
+/* блок «видео + текст» */
+.vt{display:grid;gap:clamp(18px,3vw,36px);align-items:center}
+.vt .vid{max-width:240px;width:100%}
+@media(min-width:760px){.vt{grid-template-columns:220px minmax(0,1fr)}.vt.rev{grid-template-columns:minmax(0,1fr) 220px}.vt.rev .vid{order:2}}
+.cards4{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:18px}
+@media(min-width:1100px){.cards4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.punch{margin:16px 0 0;font:500 16px/1.4 var(--display)}
+
+/* программы */
+.cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}
+.tag-r{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.5px;color:var(--muted);margin-bottom:6px}
+
+/* руководитель */
+
+/* главное видео — интервью Самары */
+.feature{display:grid;gap:clamp(18px,3vw,40px);align-items:center}
+@media(min-width:820px){.feature{grid-template-columns:minmax(260px,380px) minmax(0,1fr)}}
+.feature video{width:100%;max-width:380px;aspect-ratio:9/16;border-radius:16px;background:#000;object-fit:cover;justify-self:center;box-shadow:0 18px 40px -20px rgba(11,31,75,.45)}
+.feature ul{list-style:none;padding:0;margin:14px 0 18px;display:grid;gap:10px}
+.feature li{padding-left:22px;position:relative;line-height:1.45}
+.feature li:before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--red)}
+.lead-grid{display:grid;gap:clamp(18px,3vw,36px);align-items:start}
+@media(min-width:760px){.lead-grid{grid-template-columns:minmax(180px,260px) minmax(0,1fr)}}
+.lead-grid > img{border-radius:var(--r);width:100%;max-width:260px;aspect-ratio:4/5;object-fit:cover;object-position:top}
+.nums{grid-template-columns:repeat(2,minmax(0,1fr));margin:16px 0}
+@media(min-width:1000px){.nums{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.nums div{background:#fff;border-radius:var(--r);padding:12px}
+.nums b{display:block;font:600 22px/1 var(--display)}
+.nums small{display:block;color:var(--muted);font-size:12.5px;margin-top:5px;line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:var(--r-pill);padding:6px 12px;font-size:12.5px}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--gap);margin-top:16px}
+.mini > div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;align-items:center;background:#fff;border-radius:var(--r);padding:8px}
+.mini video,.mini img{width:72px;border-radius:8px;object-fit:cover}
+.mini video{aspect-ratio:9/16;background:#000}
+.mini img{aspect-ratio:1/1}
+.mini h3{font-size:14px}
+.mini p{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+
+/* кейсы и отзывы */
+.vcards{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px;display:flex;flex-direction:column;gap:10px}
+.soft .vcard{border-color:#fff}
+.vcard .vid video{aspect-ratio:9/12}
+.vcard .t{padding:0 4px 4px}
+.vcard p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.pill{display:inline-block;background:var(--bg-soft);border-radius:var(--r-pill);padding:3px 10px;font:600 11.5px/1.4 var(--body);color:var(--muted);margin-bottom:6px}
+
+/* клиенты */
+.logos{grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr))}
+.lg{background:#fff;border:1px solid var(--line);border-radius:var(--r);min-height:72px;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;font:500 12.5px/1.25 var(--body);color:var(--navy)}
+.lg img{max-height:40px;max-width:80%;width:auto;height:auto;object-fit:contain}
+.strip{grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));margin-top:var(--gap)}
+.strip figure{margin:0}
+.strip img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;border-radius:var(--r)}
+
+/* тарифы */
+.prices{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.price{background:var(--navy-2);border:1px solid var(--navy-line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:6px}
+.price.best{background:#fff;color:var(--navy);border-color:#fff}
+.price .k{font:600 11px/1.3 var(--body);letter-spacing:1.5px;text-transform:uppercase;color:var(--on-navy-muted)}
+.price.best .k{color:var(--muted)}
+.price h3{font-size:20px}
+.rows{list-style:none;margin:4px 0 0;padding:0}
+.rows li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid var(--navy-line);font-size:14px}
+.price.best .rows li{border-color:var(--line)}
+.rows b{font:600 17px/1.2 var(--display);white-space:nowrap}
+.price .u{font-size:12.5px;color:var(--on-navy-muted)}
+.price.best .u{color:var(--muted)}
+.pnote{margin:14px 0 0;font-size:13px;color:var(--on-navy-muted)}
+
+/* шаги */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font:600 20px/1 var(--display);color:var(--muted);margin-bottom:8px}
+
+/* подходит */
+.fit{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.fit ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;font-size:14px}
+.fit li{display:flex;gap:10px}
+.fit li::before{content:"✓";flex:0 0 20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;line-height:20px;text-align:center}
+.fit .no li{color:var(--muted)}
+.fit .no li::before{content:"–";background:var(--line);color:var(--muted)}
+
+/* форма */
+.formwrap{display:grid;gap:22px}
+@media(min-width:960px){.formwrap{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start}.formside{position:sticky;top:76px}}
+form{display:grid;gap:10px}
+fieldset{border:1px solid var(--line);border-radius:var(--r);padding:14px;margin:0;display:grid;gap:12px;min-width:0}
+legend{font:600 11.5px/1 var(--body);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:0 6px}
+label.f{display:grid;gap:5px;font-weight:500;font-size:14px}
+.req{color:var(--red)}
+input[type=text],input[type=tel],input[type=email],input[type=number],input[type=month],textarea{width:100%;font:400 16px/1.4 var(--body);color:var(--text);background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px}
+textarea{min-height:72px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--navy);outline-offset:1px}
+.hint{font-weight:400;color:var(--muted);font-size:12.5px}
+.q{display:grid;gap:7px}
+.q>span{font-weight:500;font-size:14px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{position:relative;max-width:100%}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt span{display:inline-block;border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 12px;font-size:13px;line-height:1.3;background:#fff}
+.opt input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opt input:focus-visible+span{outline:2px solid var(--navy);outline-offset:2px}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.err{color:var(--red);font-size:14px;font-weight:500;min-height:1em;margin:0}
+.thanks{display:none;border-radius:var(--r);background:var(--bg-soft);padding:24px 20px}
+.thanks h3{font-size:22px;margin-bottom:6px}
+.thanks p{margin:0;color:var(--muted)}
+.contacts{display:grid;gap:4px;margin-top:14px;font-size:14px}
+.contacts a{font-weight:600;text-decoration:none;word-break:break-word}
+
+.sec-cta{margin-top:clamp(18px,2.4vw,26px)}
+.vt > .sec-cta,.lead-grid > .sec-cta{grid-column:1/-1;margin-top:0;order:3}
+.dark .sec-cta .btn{min-width:200px}
+
+.classes{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin-top:var(--gap)}
+.classes img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+
+/* подвал — светлый */
+footer{background:var(--bg-soft);color:var(--muted);padding:30px 0 22px;font-size:13.5px;border-top:1px solid var(--line)}
+.fgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+footer img{height:36px;width:auto}
+footer h4{margin:0 0 6px;color:var(--navy);font:600 12px/1.3 var(--body);letter-spacing:1.5px;text-transform:uppercase}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+footer a{color:var(--navy);text-decoration:none;font-weight:600;word-break:break-word}
+.legal{border-top:1px solid var(--line);margin-top:20px;padding-top:12px;font-size:12px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" aria-label="Maximum English"><img src="assets/logo.png" alt="Maximum English — образовательный центр" width="109" height="30"></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#why">Выгода</a><a href="#topics">Программы</a><a href="#cases">Кейсы</a><a href="#prices">Тарифы</a><a href="#process">Как работаем</a>
+    </nav>
+    <a class="btn main" href="#brief">Оставить заявку</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. ГЕРОЙ (тёмный блок 1 из 2). Цифры: A Компания.md (A1 — с 2020; «15 000+ выпускников» — решено Самарой 05.11.2026; A3 — 4 филиала) -->
+<section class="hero dark">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Корпоративное обучение английскому</p>
+      <h1>Английский, который приносит Вашей компании <em>сделки и рост</em></h1>
+      <p class="lead">Измеримый результат каждого сотрудника и ежемесячный отчёт руководству.</p>
+      <div class="cta">
+        <a class="btn main" href="#brief">Получить коммерческое предложение</a>
+        <a class="btn" href="#prices">Тарифы</a>
+      </div>
+      <div class="stats">
+        <div><b>с 2020</b><small>лицензированный центр</small></div>
+        <div><b>15 000+</b><small>выпускников</small></div>
+        <div><b>4</b><small>филиала и онлайн</small></div>
+      </div>
+    </div>
+    <!-- Кадр из ролика школы case-kmu: сотрудники Международного университета Кыргызстана с сертификатами (без субтитров, людей не обрезаем) -->
+    <figure><img src="assets/kmu-group.jpg" alt="Сотрудники Международного университета Кыргызстана с сертификатами после корпоративного курса" width="1080" height="690"><figcaption>Сотрудники Международного университета Кыргызстана после корпоративного курса</figcaption></figure>
+  </div>
+</section>
+
+<!-- 2. ПОЧЕМУ ОБУЧАТЬ СВОИХ. Формулировки Самары: samara-why-train.mp4 (DLsAzyWo4C-.txt), интервью (DGAzWBvoql0.txt) -->
+<!-- ГЛАВНОЕ ВИДЕО: интервью Самары о корпоративном обучении -->
+<section id="interview">
+  <div class="wrap feature">
+    <video controls playsinline preload="metadata" poster="assets/samara-interview-poster.jpg" width="540" height="960"><source src="assets/samara-interview.mp4" type="video/mp4"></video>
+    <div>
+      <h2>Самара Назырынбекова о корпоративном обучении</h2>
+      <p class="lead">Исполнительный директор Maximum English — почему компании выгоднее обучать своих сотрудников</p>
+      <ul>
+        <li>Экономия на зарплатах и подборе кадров</li>
+        <li>Лояльность: сотрудник видит, что в него вкладываются</li>
+        <li>Меньше рисков — компания уже знает этого человека</li>
+        <li>Рост людей внутри компании</li>
+      </ul>
+      <a class="btn main" href="#brief">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap vt">
+    <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-why-poster.jpg" width="360" height="640"><source src="assets/samara-why-train.mp4" type="video/mp4"></video><p class="cap">Самара Назырынбекова, исполнительный директор</p></div>
+    <div>
+      <h2>Обучить своих выгоднее, чем нанимать готовых</h2>
+      <p class="lead">Ваши сотрудники уже знают процессы и клиентов. Английский — навык, его можно добавить.</p>
+      <div class="grid cards4">
+        <div class="card"><h3>Экономия</h3><p>на зарплатах и подборе кадров</p></div>
+        <div class="card"><h3>Лояльность</h3><p>сотрудник видит, что в него вкладываются</p></div>
+        <div class="card"><h3>Минимум рисков</h3><p>без адаптации нового человека до 3 месяцев</p></div>
+        <div class="card"><h3>Рост внутри</h3><p>можно продвигать своих людей</p></div>
+      </div>
+      <p class="punch">Инвестируйте в развитие своей команды — а мы поможем.</p>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 3. БОЛИ. «Английский — часть воронки продаж» — samara-funnel.mp4 (DLprAPLIaLu.txt) -->
+<section class="soft">
+  <div class="wrap vt rev">
+    <div class="vid"><video controls playsinline preload="metadata" poster="assets/samara-funnel-poster.jpg" width="360" height="640"><source src="assets/samara-funnel.mp4" type="video/mp4"></video><p class="cap">Зачем бизнесу английский внутри команды</p></div>
+    <div>
+      <h2>Если клиент не понят — он уходит из воронки</h2>
+      <p class="lead">Логистика, импорт, туризм, IT: клиенты давно говорят не только на русском.</p>
+      <div class="grid cards4">
+        <div class="card"><h3>Молчат на переговорах</h3><p>с иностранными партнёрами говорит один человек</p></div>
+        <div class="card"><h3>Переписка через переводчик</h3><p>письма и КП занимают лишнее время</p></div>
+        <div class="card"><h3>Курсы «для галочки»</h3><p>посещаемость падает, уровень не растёт</p></div>
+        <div class="card"><h3>Нет отчётов</h3><p>руководство не видит прогресса</p></div>
+      </div>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 4. ПРОГРАММЫ (по КП 2026 и B Продукт.md) -->
+<section id="topics">
+  <div class="wrap">
+    <div class="head">
+      <h2>Английский под задачи Вашей компании</h2>
+      <p class="lead">От общего английского до отраслевых программ и подготовки к ICAO.</p>
+    </div>
+    <div class="grid cards">
+      <div class="card"><h3>Общий английский</h3><p>С нуля до Advanced, группы по уровням</p></div>
+      <div class="card"><h3>Деловой английский</h3><p>Встречи, звонки, представление компании</p></div>
+      <div class="card"><h3>Переговоры и презентации</h3><p>Аргументы и ситуации из Вашей практики</p></div>
+      <div class="card"><h3>Деловая переписка</h3><p>Письма, КП, договоры и документы</p></div>
+      <div class="card"><h3>Авиационный английский</h3><p>Подготовка к ICAO, уровни 4–5</p></div>
+      <div class="card"><h3>Медицинский английский</h3><p>Лексика и общение с пациентами и коллегами</p></div>
+      <div class="card"><h3>Технический английский</h3><p>Документация, инструкции, термины отрасли</p></div>
+      <div class="card"><h3>Английский для финансов</h3><p>Банки, отчётность, финансовые термины</p></div>
+      <div class="card"><h3>Программа для руководства</h3><p>Мини-группа или один на один</p></div>
+      <div class="card"><h3>Международные экзамены</h3><p>IELTS и другие — под балл и сроки</p></div>
+      <div class="card"><h3>Повышение квалификации преподавателей</h3><p>Коммуникативная методика</p></div>
+      <div class="card"><h3>Ваша отрасль</h3><p>Соберём программу под задачи компании</p></div>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 5. РУКОВОДИТЕЛЬ. Самара — исполнительный директор (A2). Биографии нет — только должность.
+     Цифры: A Компания.md (A1, A3); «~1 200 студентов» и «15 000+» — решено Самарой 05.11.2026. Community — из её ролика. -->
+<section id="about" class="soft">
+  <div class="wrap lead-grid">
+    <img src="assets/samara.jpg" alt="Самара Назырынбекова, исполнительный директор Maximum English" width="800" height="1067" loading="lazy">
+    <div>
+      <h2>Самара Назырынбекова</h2>
+      <p class="lead">Исполнительный директор Maximum English</p>
+      <div class="grid nums">
+        <div><b>2020</b><small>год основания</small></div>
+        <div><b>4</b><small>филиала и онлайн</small></div>
+        <div><b>~1 200</b><small>студентов обычно</small></div>
+        <div><b>15 000+</b><small>выпускников</small></div>
+      </div>
+      <div class="mini">
+        <div><img src="assets/hiking.jpg" alt="Hiking Club Maximum English в горах" width="720" height="540" loading="lazy"><div><h3>Community Maximum English</h3><p>Hiking Club и Movie Day с июня 2024</p></div></div>
+      </div>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 6. КЕЙСЫ. Ролики школы; тексты — по вшитым титрам. Цифр нет — не добавлять без данных. -->
+<section id="cases">
+  <div class="wrap">
+    <div class="head">
+      <h2>Как это выглядит на практике</h2>
+    </div>
+    <div class="grid vcards">
+      <article class="vcard">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/poster-case.jpg" width="540" height="960"><source src="assets/case-kmu.mp4" type="video/mp4"></video></div>
+        <div class="t"><h3>Международный университет Кыргызстана</h3><p>Корпоративный курс, экзамен и сертификаты для сотрудников.</p></div>
+      </article>
+      <article class="vcard">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/poster-kai.jpg" width="540" height="960"><source src="assets/case-kai.mp4" type="video/mp4"></video></div>
+        <div class="t"><h3>КАИ им. И. Абдраимова</h3><p>Курс «Основы коммуникативной методологии» для преподавателей английского.</p></div>
+      </article>
+      <article class="vcard">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/corp-hiking-poster.jpg" width="540" height="960"><source src="assets/corp-hiking.mp4" type="video/mp4"></video></div>
+        <div class="t"><h3>Корпоративный Hiking Club</h3><p>День в горах для команд «М-Булак», «Автоком Джапан» и КАИ.</p></div>
+      </article>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 7. ОТЗЫВЫ. Только подписи, текст отзывов не пересказываем -->
+<section class="soft">
+  <div class="wrap">
+    <div class="head">
+      <h2>Что говорят наши корпоративные клиенты</h2>
+    </div>
+    <div class="grid vcards">
+      <figure class="vcard" style="margin:0">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/poster-review.jpg" width="540" height="960"><source src="assets/review-kanykei.mp4" type="video/mp4"></video></div>
+        <figcaption class="t"><h3>Каныкей</h3><p>сотрудник Международного университета Кыргызстана</p></figcaption>
+      </figure>
+      <figure class="vcard" style="margin:0">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/review-adji-poster.jpg" width="540" height="960"><source src="assets/review-adji.mp4" type="video/mp4"></video></div>
+        <figcaption class="t"><h3>ОсОО «Аджи-Сервис»</h3><p>обучение сотрудников в офисе компании</p></figcaption>
+      </figure>
+      <figure class="vcard" style="margin:0">
+        <div class="vid"><video controls playsinline preload="metadata" poster="assets/review-corp2-poster.jpg" width="540" height="960"><source src="assets/review-corp2.mp4" type="video/mp4"></video></div>
+        <figcaption class="t"><h3>Корпоративный клиент</h3><p>отзыв о корпоративном обучении</p></figcaption>
+      </figure>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 8. НАМ ДОВЕРЯЮТ. Первые 7 — подтверждены Самарой (DGAzWBvoql0.txt) + МУК из роликов; далее — списки клиентов в КП 2026.
+     Логотипы Coca-Cola, Glovo — Wikimedia Commons, Public domain. Размещение логотипов клиентов — после разрешения Самары. -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>Нам доверяют обучение своих сотрудников</h2>
+      <p class="lead">Банки, университеты и международные компании</p>
+    </div>
+    <div class="grid logos">
+      <div class="lg">ОсОО «Финкап»</div>
+      <div class="lg"><img src="assets/logos/somo.png" alt="Somo.kg" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/kai.png" alt="Кыргызский авиационный институт им. И. Абдраимова" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/avtokom-japan.png" alt="Автоком Джапан" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/adji-service.png" alt="ОсОО «Аджи-Сервис»" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/mbulak.png" alt="ОсОО МКК «М-Булак»" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/iuk.png" alt="Международный университет Кыргызстана" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/coca-cola.svg" alt="Кока-Кола Бишкек Боттлерс" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/glovo.svg" alt="Glovo" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/gazprom-kyrgyzstan.svg" alt="Газпром Кыргызстан" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/nobel-ilac.png" alt="Nobel İlaç" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/bakai.png" alt="Бакай Банк" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/dos-kredobank.png" alt="Дос-Кредобанк" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/demirbank.svg" alt="Демир Кыргыз Интернэшнл Банк" loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/nanolumi.svg" alt="Нанолюми Пте. Лтд." loading="lazy"></div>
+      <div class="lg"><img src="assets/logos/chakan.png" alt="Чакан ГЭС" loading="lazy"></div>
+    </div>
+    <!-- Кадры из роликов школы (субтитры обрезаны) -->
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 9. ТАРИФЫ (тёмный блок 2 из 2) — цены без изменений (Самара 20.11 01:33 и КП) -->
+<section id="prices" class="dark">
+  <div class="wrap">
+    <div class="head">
+      <h2>Стоимость за месяц обучения</h2>
+      <p class="lead">Месяц — 12 академических часов. Цена фиксируется на весь договор.</p>
+    </div>
+    <div class="grid prices">
+      <div class="price"><span class="k">до 50 сотрудников</span><h3>«Команда»</h3>
+        <ul class="rows"><li><span>В нашем центре</span><b>от 6 000</b></li><li><span>В офисе компании</span><b>от 6 500</b></li><li><span>Онлайн</span><b>от 5 000</b></li></ul>
+        <span class="u">сом за сотрудника в месяц</span></div>
+      <div class="price best"><span class="k">от 50 сотрудников</span><h3>«Компания»</h3>
+        <ul class="rows"><li><span>В нашем центре</span><b>от 5 500</b></li><li><span>В офисе компании</span><b>от 6 500</b></li><li><span>Онлайн</span><b>от 4 500</b></li></ul>
+        <span class="u">сом за сотрудника в месяц</span></div>
+      <div class="price"><span class="k">персонально</span><h3>«Индивидуальный»</h3>
+        <ul class="rows"><li><span>Мини-группа до 3 чел.</span><b>от 40 000</b></li><li><span>1 на 1</span><b>24 000–26 000</b></li></ul>
+        <span class="u">сом в месяц</span></div>
+    </div>
+    <p class="pnote">Тестирование, первый урок и учебные материалы — бесплатно. Оплата помесячно по договору.</p>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 10. КАК МЫ РАБОТАЕМ -->
+<section id="process">
+  <div class="wrap">
+    <div class="head">
+      <h2>От заявки до первого отчёта</h2>
+    </div>
+    <ol class="grid steps">
+      <li class="card"><h3>Заявка</h3><p>Бриф на 5 минут</p></li>
+      <li class="card"><h3>Тест уровня</h3><p>Бесплатно, для каждого</p></li>
+      <li class="card"><h3>КП и договор</h3><p>Формат, группы, график</p></li>
+      <li class="card"><h3>Обучение</h3><p>Первый урок бесплатно</p></li>
+      <li class="card"><h3>Отчёт руководству</h3><p>Каждый месяц</p></li>
+    </ol>
+    <!-- Живые фото уроков в филиалах (Мозг, подобраны владелицей) -->
+    <div class="grid classes">
+      <img src="assets/class-1.jpg" alt="Занятие английским для взрослых" width="1000" height="667" loading="lazy">
+      <img src="assets/class-2.jpg" alt="Индивидуальное занятие с преподавателем" width="1000" height="667" loading="lazy">
+      <img src="assets/class-3.jpg" alt="Онлайн-занятие с преподавателем" width="1000" height="667" loading="lazy">
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 11. ЭТО ПОДХОДИТ, ЕСЛИ (условия из КП и B Продукт.md) -->
+<section class="soft">
+  <div class="wrap">
+    <div class="head">
+      <h2>Это подходит, если</h2>
+    </div>
+    <div class="grid fit">
+      <div class="card"><h3>Подходит</h3><ul>
+        <li>Английский нужен в работе: партнёры, переписка, встречи</li>
+        <li>Готовы к 2–3 занятиям в неделю</li>
+        <li>Важны отчёты и измеримый прогресс</li>
+      </ul></div>
+      <div class="card no"><h3>Не подходит</h3><ul>
+        <li>Нужен свободный английский «за месяц»</li>
+        <li>Разные уровни в одной группе</li>
+        <li>Обучение только для отчёта</li>
+      </ul></div>
+    </div>
+    <div class="sec-cta"><a class="btn main" href="#brief">Оставить заявку</a></div>
+  </div>
+</section>
+
+<!-- 12. БРИФ — поля и логика отправки без изменений -->
+<section id="brief">
+  <div class="wrap formwrap">
+    <div class="formside">
+      <h2>Бриф для коммерческого предложения</h2>
+      <p class="lead">5 минут — и мы подготовим предложение под Вашу компанию.</p>
+      <!-- Контакты: A Компания.md (A4) -->
+      <div class="contacts">
+        <span>Телефон: <a href="tel:+996556889889">0556 889 889</a> · <a href="tel:+996706889889">0706 889 889</a></span>
+        <span>Почта: <a href="mailto:maximum.english.school@gmail.com">maximum.english.school@gmail.com</a></span>
+      </div>
+    </div>
+    <div>
+    <form id="briefForm" novalidate>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <fieldset>
+        <legend>Об организации</legend>
+        <label class="f"><span>Наименование организации <span class="req">*</span></span><input type="text" name="org" required autocomplete="organization"></label>
+        <label class="f">Сфера деятельности<input type="text" name="sphere"></label>
+        <label class="f"><span>Контактное лицо: ФИО, должность <span class="req">*</span></span><input type="text" name="contact" required></label>
+        <label class="f"><span>Телефон, e-mail <span class="req">*</span></span><input type="text" name="phone_email" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Цели обучения</legend>
+        <div class="q"><span>Какие задачи должно решить обучение?</span><div class="opts">
+          <label class="opt"><input type="checkbox" name="goals" value="Деловая переписка и документация"><span>Деловая переписка и документация</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Переговоры и презентации"><span>Переговоры и презентации</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Работа с иностранными партнёрами и клиентами"><span>Работа с иностранными партнёрами и клиентами</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Командировки"><span>Командировки</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Подготовка к международному экзамену (IELTS и др.)"><span>Подготовка к международному экзамену (IELTS и др.)</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Развитие персонала"><span>Развитие персонала</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Другое"><span>Другое</span></label>
+        </div></div>
+        <label class="f">Какие должности / отделы планируете обучать?<textarea name="departments"></textarea></label>
+        <label class="f">Планируемое количество слушателей<input type="number" name="count" min="1" inputmode="numeric"></label>
+        <div class="q"><span>Текущий уровень английского у сотрудников</span><div class="opts">
+          <label class="opt"><input type="radio" name="level" value="Не известен, нужно тестирование"><span>Не известен, нужно тестирование</span></label>
+          <label class="opt"><input type="radio" name="level" value="Примерно одинаковый"><span>Примерно одинаковый</span></label>
+          <label class="opt"><input type="radio" name="level" value="Разный"><span>Разный</span></label>
+          <label class="opt"><input type="radio" name="level" value="Уточните"><span>Уточните</span></label>
+        </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Формат и сроки</legend>
+        <div class="q"><span>Предпочтительный формат</span><div class="opts">
+          <label class="opt"><input type="checkbox" name="format" value="В офисе вашей организации"><span>В офисе Вашей организации</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="В нашем учебном центре"><span>В нашем учебном центре</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="Онлайн"><span>Онлайн</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="Смешанный"><span>Смешанный</span></label>
+        </div></div>
+        <div class="q"><span>Формат групп</span><div class="opts">
+          <label class="opt"><input type="radio" name="groups" value="Группы"><span>Группы</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Мини-группы (2–4 чел.)"><span>Мини-группы (2–4 чел.)</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Индивидуальные занятия"><span>Индивидуальные занятия</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Комбинированно"><span>Комбинированно</span></label>
+        </div></div>
+        <label class="f">Удобные дни и время занятий<textarea name="schedule"></textarea></label>
+        <div class="two">
+          <label class="f">Планируемый старт обучения<input type="month" name="start"></label>
+          <div class="q"><span>Продолжительность программы</span><div class="opts">
+            <label class="opt"><input type="radio" name="duration" value="1 месяц"><span>1 месяц</span></label>
+            <label class="opt"><input type="radio" name="duration" value="3 месяца"><span>3 месяца</span></label>
+            <label class="opt"><input type="radio" name="duration" value="6 месяцев"><span>6 месяцев</span></label>
+            <label class="opt"><input type="radio" name="duration" value="Учебный год"><span>Учебный год</span></label>
+            <label class="opt"><input type="radio" name="duration" value="Уточним"><span>Уточним</span></label>
+          </div></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Отчётность и оплата</legend>
+        <label class="f">В каком формате вам нужны отчёты о посещаемости и прогрессе слушателей? Есть ли утверждённый шаблон?<span class="hint">Если шаблона нет, мы предложим свой.</span><textarea name="reports"></textarea></label>
+        <div class="q"><span>Порядок оплаты, принятый в Вашей организации</span><div class="opts">
+          <label class="opt"><input type="radio" name="payment" value="Предоплата"><span>Предоплата</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Постоплата"><span>Постоплата</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Гарантийное письмо"><span>Гарантийное письмо</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Депозит"><span>Депозит</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Другое"><span>Другое</span></label>
+        </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Дополнительно</legend>
+        <label class="f">Что важно учесть при подготовке предложения?<textarea name="extra"></textarea></label>
+      </fieldset>
+
+      <p class="err" id="formErr" role="alert"></p>
+      <button class="btn main" type="submit" style="justify-self:start">Отправить заявку</button>
+    </form>
+    <div class="thanks" id="thanks" role="status">
+      <p class="eyebrow">Бриф получен</p>
+      <h3>Благодарим! Бриф получен.</h3>
+      <p>Наш менеджер свяжется с Вами в течение рабочего дня и направит коммерческое предложение.</p>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ПОДВАЛ (светлый). Адреса и телефоны — A Компания.md (A3, A4), лицензия — A8 -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img src="assets/logo.png" alt="Maximum English — образовательный центр" width="130" height="36" loading="lazy">
+        <p style="margin:10px 0 0">Пн–сб 08:00–21:00</p>
+      </div>
+      <div>
+        <h4>Филиалы в Бишкеке</h4>
+        <ul>
+          <li>ул. Турусбекова 109/1, БЦ «Максимум», каб. 110</li>
+          <li>ул. Сухэ-Батора 5/5, «Берекет», 3 этаж</li>
+          <li>ул. Рыскулова 28, офис № 6</li>
+          <li>ул. Фурманова 23, напротив КГТУ</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+996556889889">0556 889 889</a> (звонки и WhatsApp)</li>
+          <li><a href="tel:+996706889889">0706 889 889</a></li>
+          <li><a href="mailto:maximum.english.school@gmail.com">maximum.english.school@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">ОсОО «Образовательный центр «Максимум Инглиш» · ИНН 02506202010168 · Лицензия МОиН КР № E2020-0091 от 29.12.2020</div>
+  </div>
+</footer>
+
+<script>
+// Отправка брифа: на почту samaragm@maximumenglish.kg через FormSubmit (без своего сервера). Дана пересылает заявку Самаре в Telegram.
+var LABELS={org:'Организация',sphere:'Сфера',contact:'Контактное лицо',phone_email:'Телефон, e-mail',goals:'Задачи обучения',departments:'Должности / отделы',count:'Кол-во слушателей',level:'Уровень',format:'Формат',groups:'Группы / индивидуально',schedule:'Дни и время',start:'Старт',duration:'Продолжительность',reports:'Отчёты',payment:'Порядок оплаты',extra:'Что учесть'};
+function submitBrief(data){
+  var body={_subject:'Бриф корп. клиента: '+(data.org||''),_template:'table',_captcha:'false'};
+  Object.keys(data).forEach(function(k){ if(k==='_honey'){return;} var v=data[k]; body[LABELS[k]||k]=Array.isArray(v)?v.join(', '):String(v).slice(0,2000); });
+  if(data._honey){ return Promise.resolve(); }
+  return fetch('https://formsubmit.co/ajax/samaragm@maximumenglish.kg',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){ if(!r.ok) throw new Error('send'); return r.json(); });
+}
+
+document.getElementById('briefForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, err = document.getElementById('formErr');
+  var bad = Array.prototype.filter.call(f.querySelectorAll('[required]'), function(i){ return !i.value.trim(); });
+  if (bad.length){ err.textContent = 'Заполните обязательные поля: организация, контактное лицо, телефон или e-mail.'; bad[0].focus(); return; }
+  err.textContent = '';
+  var data = {};
+  new FormData(f).forEach(function(v,k){
+    if (data[k] === undefined) data[k] = v;
+    else data[k] = [].concat(data[k], v);
+  });
+  var btn=f.querySelector('button[type=submit]'); if(btn){btn.disabled=true;}
+  submitBrief(data).catch(function(){ err.textContent='Не удалось отправить. Позвоните нам: +996 556 889 889 или напишите на samaragm@maximumenglish.kg'; if(btn){btn.disabled=false;} throw 0; }).then(function(){
+    f.style.display = 'none';
+    var t = document.getElementById('thanks'); t.style.display = 'block';
+    t.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+});
+</script>
+</body>
+</html>

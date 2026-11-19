@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бриф для коммерческого предложения — Maximum English</title>
+<meta name="description" content="Бриф для коммерческого предложения по корпоративному обучению английскому — Maximum English.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v4.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" aria-label="Maximum English — на главную"><img src="assets/logo-white.png" alt="Maximum English — образовательный центр" width="123" height="34"></a>
+    <!-- «на главную» ведёт на лендинг; после замены index.html на v4 поменять ссылку на ./ -->
+    <a class="back" href="index.html">← на главную</a>
+  </div>
+</header>
+<main>
+<section class="s-dark" style="padding:clamp(48px,6vw,80px) 0">
+  <div class="wrap">
+    <p class="eyebrow">бриф</p>
+    <h1 class="h-xl">Бриф для коммерческого предложения</h1>
+    <p class="lead">5 минут — и мы подготовим предложение под Вашу компанию. Обязательны только первые поля.</p>
+  </div>
+</section>
+<section class="s-white" id="brief" style="padding:clamp(40px,5vw,72px) 0">
+  <div class="wrap" style="max-width:900px">
+    <form id="briefForm" class="bf" novalidate>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <fieldset>
+        <legend>Об организации</legend>
+        <label class="f"><span>Наименование организации <span class="req">*</span></span><input type="text" name="org" required autocomplete="organization"></label>
+        <label class="f">Сфера деятельности<input type="text" name="sphere"></label>
+        <label class="f"><span>Контактное лицо: ФИО, должность <span class="req">*</span></span><input type="text" name="contact" required></label>
+        <label class="f"><span>Телефон, e-mail <span class="req">*</span></span><input type="text" name="phone_email" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Цели обучения</legend>
+        <div class="q"><span>Какие задачи должно решить обучение?</span><div class="opts">
+          <label class="opt"><input type="checkbox" name="goals" value="Деловая переписка и документация"><span>Деловая переписка и документация</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Переговоры и презентации"><span>Переговоры и презентации</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Работа с иностранными партнёрами и клиентами"><span>Работа с иностранными партнёрами и клиентами</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Командировки"><span>Командировки</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Подготовка к международному экзамену (IELTS и др.)"><span>Подготовка к международному экзамену (IELTS и др.)</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Развитие персонала"><span>Развитие персонала</span></label>
+          <label class="opt"><input type="checkbox" name="goals" value="Другое"><span>Другое</span></label>
+        </div></div>
+        <label class="f">Какие должности / отделы планируете обучать?<textarea name="departments"></textarea></label>
+        <label class="f">Планируемое количество слушателей<input type="number" name="count" min="1" inputmode="numeric"></label>
+        <div class="q"><span>Текущий уровень английского у сотрудников</span><div class="opts">
+          <label class="opt"><input type="radio" name="level" value="Не известен, нужно тестирование"><span>Не известен, нужно тестирование</span></label>
+          <label class="opt"><input type="radio" name="level" value="Примерно одинаковый"><span>Примерно одинаковый</span></label>
+          <label class="opt"><input type="radio" name="level" value="Разный"><span>Разный</span></label>
+          <label class="opt"><input type="radio" name="level" value="Уточните"><span>Уточните</span></label>
+        </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Формат и сроки</legend>
+        <div class="q"><span>Предпочтительный формат</span><div class="opts">
+          <label class="opt"><input type="checkbox" name="format" value="В офисе вашей организации"><span>В офисе Вашей организации</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="В нашем учебном центре"><span>В нашем учебном центре</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="Онлайн"><span>Онлайн</span></label>
+          <label class="opt"><input type="checkbox" name="format" value="Смешанный"><span>Смешанный</span></label>
+        </div></div>
+        <div class="q"><span>Формат групп</span><div class="opts">
+          <label class="opt"><input type="radio" name="groups" value="Группы"><span>Группы</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Мини-группы (2–4 чел.)"><span>Мини-группы (2–4 чел.)</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Индивидуальные занятия"><span>Индивидуальные занятия</span></label>
+          <label class="opt"><input type="radio" name="groups" value="Комбинированно"><span>Комбинированно</span></label>
+        </div></div>
+        <label class="f">Удобные дни и время занятий<textarea name="schedule"></textarea></label>
+        <div class="two">
+          <label class="f">Планируемый старт обучения<input type="month" name="start"></label>
+          <div class="q"><span>Продолжительность программы</span><div class="opts">
+            <label class="opt"><input type="radio" name="duration" value="1 месяц"><span>1 месяц</span></label>
+            <label class="opt"><input type="radio" name="duration" value="3 месяца"><span>3 месяца</span></label>
+            <label class="opt"><input type="radio" name="duration" value="6 месяцев"><span>6 месяцев</span></label>
+            <label class="opt"><input type="radio" name="duration" value="Учебный год"><span>Учебный год</span></label>
+            <label class="opt"><input type="radio" name="duration" value="Уточним"><span>Уточним</span></label>
+          </div></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Отчётность и оплата</legend>
+        <label class="f">В каком формате вам нужны отчёты о посещаемости и прогрессе слушателей? Есть ли утверждённый шаблон?<span class="hint">Если шаблона нет, мы предложим свой.</span><textarea name="reports"></textarea></label>
+        <div class="q"><span>Порядок оплаты, принятый в Вашей организации</span><div class="opts">
+          <label class="opt"><input type="radio" name="payment" value="Предоплата"><span>Предоплата</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Постоплата"><span>Постоплата</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Гарантийное письмо"><span>Гарантийное письмо</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Депозит"><span>Депозит</span></label>
+          <label class="opt"><input type="radio" name="payment" value="Другое"><span>Другое</span></label>
+        </div></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Дополнительно</legend>
+        <label class="f">Что важно учесть при подготовке предложения?<textarea name="extra"></textarea></label>
+      </fieldset>
+
+      <p class="err" id="formErr" role="alert"></p>
+      <button class="btn btn-red" type="submit" style="justify-self:start">Отправить заявку</button>
+    </form>
+
+    <div class="thanks" id="thanks" role="status">
+      <p class="eyebrow">Бриф получен</p>
+      <h3>Благодарим! Бриф получен.</h3>
+      <p>Наш менеджер свяжется с Вами в течение рабочего дня и направит коммерческое предложение.</p>
+    </div>
+    <div class="contacts">
+      <span>Телефон: <a href="tel:+996556889889">0556 889 889</a> · <a href="tel:+996706889889">0706 889 889</a></span>
+      <span>Почта: <a href="mailto:maximum.english.school@gmail.com">maximum.english.school@gmail.com</a></span>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="legal" style="margin-top:0;border-top:0;padding-top:0">ОсОО «Образовательный центр «Максимум Инглиш» · ИНН 02506202010168 · Лицензия МОиН КР № E2020-0091 от 29.12.2020</div>
+  </div>
+</footer>
+<script>
+// Отправка брифа: на почту samaragm@maximumenglish.kg через FormSubmit (без своего сервера). Дана пересылает заявку Самаре в Telegram.
+var LABELS={org:'Организация',sphere:'Сфера',contact:'Контактное лицо',phone_email:'Телефон, e-mail',goals:'Задачи обучения',departments:'Должности / отделы',count:'Кол-во слушателей',level:'Уровень',format:'Формат',groups:'Группы / индивидуально',schedule:'Дни и время',start:'Старт',duration:'Продолжительность',reports:'Отчёты',payment:'Порядок оплаты',extra:'Что учесть'};
+function submitBrief(data){
+  var body={_subject:'Бриф корп. клиента: '+(data.org||''),_template:'table',_captcha:'false'};
+  Object.keys(data).forEach(function(k){ if(k==='_honey'){return;} var v=data[k]; body[LABELS[k]||k]=Array.isArray(v)?v.join(', '):String(v).slice(0,2000); });
+  if(data._honey){ return Promise.resolve(); }
+  return fetch('https://formsubmit.co/ajax/samaragm@maximumenglish.kg',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){ if(!r.ok) throw new Error('send'); return r.json(); });
+}
+
+document.getElementById('briefForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, err = document.getElementById('formErr');
+  var bad = Array.prototype.filter.call(f.querySelectorAll('[required]'), function(i){ return !i.value.trim(); });
+  if (bad.length){ err.textContent = 'Заполните обязательные поля: организация, контактное лицо, телефон или e-mail.'; bad[0].focus(); return; }
+  err.textContent = '';
+  var data = {};
+  new FormData(f).forEach(function(v,k){
+    if (data[k] === undefined) data[k] = v;
+    else data[k] = [].concat(data[k], v);
+  });
+  var btn=f.querySelector('button[type=submit]'); if(btn){btn.disabled=true;}
+  submitBrief(data).catch(function(){ err.textContent='Не удалось отправить. Позвоните нам: +996 556 889 889 или напишите на samaragm@maximumenglish.kg'; if(btn){btn.disabled=false;} throw 0; }).then(function(){
+    f.style.display = 'none';
+    var t = document.getElementById('thanks'); t.style.display = 'block';
+    t.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+});
+</script>
+
+</body>
+</html>

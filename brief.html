@@ -115,7 +115,7 @@
       <p>Наш менеджер свяжется с Вами в течение рабочего дня и направит коммерческое предложение.</p>
     </div>
     <div class="contacts">
-      <span>Телефон: <a href="tel:+996888115555">0888 115 555</a></span>
+      <span>Телефон: <a href="tel:+996888115555">+996 888 11 55 55</a></span>
       <span>Почта: <a href="mailto:samaragm@maximumenglish.kg">samaragm@maximumenglish.kg</a> · <a href="mailto:maximum.english.school@gmail.com">maximum.english.school@gmail.com</a></span>
     </div>
   </div>
@@ -149,7 +149,7 @@ document.getElementById('briefForm').addEventListener('submit', function(e){
     else data[k] = [].concat(data[k], v);
   });
   var btn=f.querySelector('button[type=submit]'); if(btn){btn.disabled=true;}
-  submitBrief(data).catch(function(){ err.textContent='Не удалось отправить. Позвоните нам: +996 888 115 555 или напишите на samaragm@maximumenglish.kg'; if(btn){btn.disabled=false;} throw 0; }).then(function(){
+  submitBrief(data).catch(function(){ err.textContent='Не удалось отправить. Позвоните нам: +996 888 11 55 55 или напишите на samaragm@maximumenglish.kg'; if(btn){btn.disabled=false;} throw 0; }).then(function(){
     f.style.display = 'none';
     var t = document.getElementById('thanks'); t.style.display = 'block';
     t.scrollIntoView({behavior:'smooth', block:'center'});
